@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Mis tratamientos | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/tratamientos-paciente.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- ==================
+            ENCABEZADO 
+        =================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Paciente
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ========================
+            ESTRUCTURA PRINCIPAL 
+        ========================= -->
+        <div class="dashboard-layout">
+
+
+            <!-- ===================
+                MENÚ LATERAL 
+            ==================== -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <a
+                            href="dashboard-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="citas-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Mis citas
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="solicitar-cita.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                ➕
+                            </span>
+
+                            <span>
+                                Solicitar cita
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="historial-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Mi historial clínico
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="tratamientos-paciente.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Mis tratamientos
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="perfil-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👤
+                            </span>
+
+                            <span>
+                                Mi perfil
+                            </span>
+
+                        </a>
+
+
+                    </nav>
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+            </aside>
+
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="dashboard-content">
+
+
+                <!-- TÍTULO -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Mis tratamientos
+                        </h2>
+
+                        <p>
+                            Consulta los tratamientos odontológicos registrados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RESUMEN -->
+                <section class="treatment-summary">
+
+
+                    <article class="summary-card">
+
+                        <div class="summary-icon">
+                            🦷
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Tratamientos activos
+                            </span>
+
+                            <strong>
+                                2
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="summary-card">
+
+                        <div class="summary-icon">
+                            ✅
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Tratamientos finalizados
+                            </span>
+
+                            <strong>
+                                1
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="summary-card">
+
+                        <div class="summary-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Próximo control
+                            </span>
+
+                            <strong>
+                                20/08/2026
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+
+                <!-- TRATAMIENTOS -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Tratamientos registrados
+                            </h2>
+
+                            <p>
+                                Información de los tratamientos realizados y en proceso.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="treatments-table">
+
+
+                        <!-- ENCABEZADO -->
+                        <div class="table-row table-header">
+
+                            <span>
+                                Tratamiento
+                            </span>
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <span>
+                                Fecha
+                            </span>
+
+                            <span>
+                                Estado
+                            </span>
+
+                            <span>
+                                Acción
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- TRATAMIENTO 1 -->
+                        <div class="table-row">
+
+                            <span>
+                                Ortodoncia
+                            </span>
+
+                            <span>
+                                Dra. Martínez
+                            </span>
+
+                            <span>
+                                08/08/2026
+                            </span>
+
+                            <span class="status active">
+                                En proceso
+                            </span>
+
+                            <span>
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- TRATAMIENTO 2 -->
+                        <div class="table-row">
+
+                            <span>
+                                Restauración dental
+                            </span>
+
+                            <span>
+                                Dr. Pérez
+                            </span>
+
+                            <span>
+                                15/07/2026
+                            </span>
+
+                            <span class="status active">
+                                En proceso
+                            </span>
+
+                            <span>
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- TRATAMIENTO 3 -->
+                        <div class="table-row">
+
+                            <span>
+                                Limpieza dental
+                            </span>
+
+                            <span>
+                                Dr. Pérez
+                            </span>
+
+                            <span>
+                                10/06/2026
+                            </span>
+
+                            <span class="status completed">
+                                Finalizado
+                            </span>
+
+                            <span>
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- ============================
+                    DETALLE DEL TRATAMIENTO 
+                ============================= -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Tratamiento actual
+                            </h2>
+
+                            <p>
+                                Información del tratamiento que se encuentra en proceso.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="treatment-detail">
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Tratamiento
+                            </span>
+
+                            <strong>
+                                Ortodoncia
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Diagnóstico
+                            </span>
+
+                            <strong>
+                                Maloclusión dental
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <strong>
+                                Dra. Martínez
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Estado
+                            </span>
+
+                            <strong class="detail-status">
+                                En proceso
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="observations">
+
+                        <strong>
+                            Observaciones
+                        </strong>
+
+                        <p>
+                            El tratamiento presenta evolución favorable.
+                            Se recomienda asistir a los controles programados
+                            y seguir las indicaciones del odontólogo.
+                        </p>
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+
+
+        <!-- =================
+            FOOTER 
+        ================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/tratamientos-paciente.js"></script>
+
+
+    </body>
+
+</html>

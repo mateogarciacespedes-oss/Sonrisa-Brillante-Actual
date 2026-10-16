@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+
+    <head>
+
+
+
+        <meta charset="UTF-8">
+
+
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+
+
+        <title>Dashboard | Sonrisa Brillante</title>
+
+
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+
+
+        <link
+            rel="stylesheet"
+            href="../css/dashboard.css"
+        >
+
+
+
+    </head>
+
+
+
+    <body>
+
+
+
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+
+        <header class="dashboard-header">
+
+
+
+            <div class="brand">
+
+
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+
+
+
+
+                <div>
+
+
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+
+
+
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="user-info">
+
+
+
+                <span>
+                    👤
+                </span>
+
+
+
+
+
+                <strong id="nombreUsuario">
+                    Administrador
+                </strong>
+
+
+
+            </div>
+
+
+
+        </header>
+
+
+
+
+
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+
+        <div class="dashboard-layout">
+
+
+
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+
+            <aside class="sidebar">
+
+
+
+                <div class="sidebar-menu">
+
+
+
+                    <nav>
+
+
+
+
+
+                        <!-- DASHBOARD -->
+
+                        <a
+                            href="dashboard.html"
+                            class="sidebar-link active"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+
+
+                            <span>
+                                Dashboard
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+
+
+                        <!-- USUARIOS -->
+
+                        <a
+                            href="usuarios.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+
+
+                            <span>
+                                Usuarios
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+
+
+                        <!-- PACIENTES -->
+
+                        <a
+                            href="pacientes.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+
+
+                            <span>
+                                Pacientes
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+
+
+                        <!-- CITAS -->
+
+                        <a
+                            href="citas.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+
+
+                            <span>
+                                Citas
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+
+
+                        <!-- SERVICIOS -->
+
+                        <a
+                            href="servicios.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+
+
+                            <span>
+                                Servicios
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+
+
+                        <!-- TRATAMIENTOS -->
+
+                        <a
+                            href="tratamientos.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+
+
+                        <!-- HISTORIAL CLÍNICO -->
+
+                        <a
+                            href="historial.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+
+
+                        <!-- REPORTES -->
+
+                        <a
+                            href="reportes.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                📈
+                            </span>
+
+
+
+                            <span>
+                                Reportes
+                            </span>
+
+
+
+                        </a>
+
+
+
+                    </nav>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <!-- =========================
+                    CERRAR SESIÓN
+                ========================== -->
+
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+
+
+                </a>
+
+
+
+            </aside>
+
+
+
+
+
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+
+            <main class="dashboard-content">
+
+
+
+
+
+                <!-- ENCABEZADO -->
+
+                <div class="page-heading">
+
+
+
+                    <h2>
+                        Dashboard
+                    </h2>
+
+
+
+
+
+                    <p>
+                        Resumen general del sistema odontológico.
+                    </p>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <!-- =========================
+                    TARJETAS DE RESUMEN
+                ========================== -->
+
+                <section class="stats-grid">
+
+
+
+
+
+                    <!-- PACIENTES -->
+
+                    <article class="stat-card">
+
+
+
+                        <div>
+
+
+
+                            <p>
+                                Pacientes registrados
+                            </p>
+
+
+
+                            <h3>
+                                0
+                            </h3>
+
+
+
+                        </div>
+
+
+
+
+
+                        <span class="stat-icon">
+                            👥
+                        </span>
+
+
+
+                    </article>
+
+
+
+
+
+
+
+                    <!-- CITAS -->
+
+                    <article class="stat-card">
+
+
+
+                        <div>
+
+
+
+                            <p>
+                                Citas programadas
+                            </p>
+
+
+
+                            <h3>
+                                0
+                            </h3>
+
+
+
+                        </div>
+
+
+
+
+
+                        <span class="stat-icon">
+                            📅
+                        </span>
+
+
+
+                    </article>
+
+
+
+
+
+
+
+                    <!-- ODONTÓLOGOS -->
+
+                    <article class="stat-card">
+
+
+
+                        <div>
+
+
+
+                            <p>
+                                Odontólogos
+                            </p>
+
+
+
+                            <h3>
+                                0
+                            </h3>
+
+
+
+                        </div>
+
+
+
+
+
+                        <span class="stat-icon">
+                            🦷
+                        </span>
+
+
+
+                    </article>
+
+
+
+
+
+
+
+                    <!-- TRATAMIENTOS -->
+
+                    <article class="stat-card">
+
+
+
+                        <div>
+
+
+
+                            <p>
+                                Tratamientos
+                            </p>
+
+
+
+                            <h3>
+                                0
+                            </h3>
+
+
+
+                        </div>
+
+
+
+
+
+                        <span class="stat-icon">
+                            💊
+                        </span>
+
+
+
+                    </article>
+
+
+
+
+
+                </section>
+
+
+
+
+
+
+
+                <!-- =========================
+                    CITAS PRÓXIMAS
+                ========================== -->
+
+                <section class="dashboard-section">
+
+
+
+
+
+                    <div class="section-heading">
+
+
+
+
+
+                        <div>
+
+
+
+                            <h2>
+                                Próximas citas
+                            </h2>
+
+
+
+
+
+                            <p>
+                                Citas programadas para hoy.
+                            </p>
+
+
+
+                        </div>
+
+
+
+
+
+                        <button
+                            class="btn-principal"
+                        >
+
+                            Ver todas
+
+                        </button>
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <!-- =========================
+                        TABLA DE CITAS
+                    ========================== -->
+
+                    <div class="appointments-table">
+
+
+
+
+
+                        <!-- ENCABEZADO -->
+
+                        <div class="table-row table-header">
+
+
+
+                            <span>
+                                Paciente
+                            </span>
+
+
+
+
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+
+
+
+
+                            <span>
+                                Hora
+                            </span>
+
+
+
+
+
+                            <span>
+                                Estado
+                            </span>
+
+
+
+                        </div>
+
+
+
+
+
+                        <!--
+                            Las citas reales serán
+                            cargadas mediante
+                            dashboard.js
+                        -->
+
+
+
+
+
+                    </div>
+
+
+
+
+
+                </section>
+
+
+
+
+
+            </main>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <!-- =========================
+            FOOTER
+        ========================== -->
+
+        <footer class="dashboard-footer">
+
+
+
+            <p>
+
+
+
+                © 2026 Sonrisa Brillante.
+
+
+
+                Todos los derechos reservados.
+
+
+
+            </p>
+
+
+
+        </footer>
+
+
+
+
+
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+
+        <script src="../js/dashboard.js"></script>
+
+
+
+
+
+    </body>
+
+
+
+</html>

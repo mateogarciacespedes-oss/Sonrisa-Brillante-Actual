@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Usuarios | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/usuarios.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Administrador
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+                        <a
+                            href="dashboard.html"
+                            class="sidebar-link"
+                        >
+                            <span class="menu-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+
+
+                        <a
+                            href="usuarios.html"
+                            class="sidebar-link active"
+                        >
+                            <span class="menu-icon">👥</span>
+                            <span>Usuarios</span>
+                        </a>
+
+
+                        <a
+                            href="pacientes.html"
+                            class="sidebar-link"
+                        >
+                            <span class="menu-icon">👥</span>
+                            <span>Pacientes</span>
+                        </a>
+
+
+                        <a
+                            href="citas.html"
+                            class="sidebar-link"
+                        >
+                            <span class="menu-icon">📅</span>
+                            <span>Citas</span>
+                        </a>
+
+
+                        <a
+                            href="servicios.html"
+                            class="sidebar-link"
+                        >
+                            <span class="menu-icon">🦷</span>
+                            <span>Servicios</span>
+                        </a>
+
+
+                        <a
+                            href="tratamientos.html"
+                            class="sidebar-link"
+                        >
+                            <span class="menu-icon">💊</span>
+                            <span>Tratamientos</span>
+                        </a>
+
+
+                        <a
+                            href="historial.html"
+                            class="sidebar-link"
+                        >
+                            <span class="menu-icon">📋</span>
+                            <span>Historial clínico</span>
+                        </a>
+
+
+                        <a
+                            href="reportes.html"
+                            class="sidebar-link"
+                        >
+                            <span class="menu-icon">📈</span>
+                            <span>Reportes</span>
+                        </a>
+
+                    </nav>
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+            </aside>
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- ENCABEZADO DE LA PÁGINA -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Gestión de usuarios
+                        </h2>
+
+                        <p>
+                            Administra los usuarios y roles del sistema.
+                        </p>
+
+                    </div>
+
+
+                    <button class="btn-principal">
+                        + Nuevo usuario
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                    BÚSQUEDA
+                ========================== -->
+                <section class="search-section">
+
+                    <div class="search-box">
+
+                        <label for="buscarUsuario">
+                            Buscar usuario
+                        </label>
+
+                        <input
+                            type="search"
+                            id="buscarUsuario"
+                            placeholder="Buscar por nombre, documento o correo"
+                        >
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                    TABLA DE USUARIOS
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Usuarios registrados
+                            </h2>
+
+                            <p>
+                                Lista de usuarios con acceso al sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="users-table">
+
+
+                        <!-- ENCABEZADO DE TABLA -->
+                        <div class="table-row table-header">
+
+                            <span>
+                                Documento
+                            </span>
+
+                            <span>
+                                Usuario
+                            </span>
+
+                            <span>
+                                Correo
+                            </span>
+
+                            <span>
+                                Rol
+                            </span>
+
+                            <span>
+                                Estado
+                            </span>
+
+                            <span>
+                                Acciones
+                            </span>
+
+                        </div>
+
+
+                        <!-- USUARIO 1 -->
+                        <div class="table-row">
+
+                            <span>
+                                1094968757
+                            </span>
+
+                            <span>
+                                Mateo García
+                            </span>
+
+                            <span>
+                                mateo@sonrisabrillante.com
+                            </span>
+
+                            <span>
+                                Administrador
+                            </span>
+
+                            <span>
+                                Activo
+                            </span>
+
+                            <span class="actions">
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                                <button class="btn-action">
+                                    Editar
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- USUARIO 2 -->
+                        <div class="table-row">
+
+                            <span>
+                                1098456321
+                            </span>
+
+                            <span>
+                                Laura Martínez
+                            </span>
+
+                            <span>
+                                laura@sonrisabrillante.com
+                            </span>
+
+                            <span>
+                                Recepcionista
+                            </span>
+
+                            <span>
+                                Activo
+                            </span>
+
+                            <span class="actions">
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                                <button class="btn-action">
+                                    Editar
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- USUARIO 3 -->
+                        <div class="table-row">
+
+                            <span>
+                                1087654321
+                            </span>
+
+                            <span>
+                                Carlos Pérez
+                            </span>
+
+                            <span>
+                                carlos@sonrisabrillante.com
+                            </span>
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <span>
+                                Activo
+                            </span>
+
+                            <span class="actions">
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                                <button class="btn-action">
+                                    Editar
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- USUARIO 4 -->
+                        <div class="table-row">
+
+                            <span>
+                                1123456789
+                            </span>
+
+                            <span>
+                                Ana Rodríguez
+                            </span>
+
+                            <span>
+                                ana@sonrisabrillante.com
+                            </span>
+
+                            <span>
+                                Recepcionista
+                            </span>
+
+                            <span>
+                                Inactivo
+                            </span>
+
+                            <span class="actions">
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                                <button class="btn-action">
+                                    Editar
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+        <!-- =========================
+            PIE DE PÁGINA
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/usuarios.js"></script>
+
+
+    </body>
+
+
+</html>
+
+
+
+

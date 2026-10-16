@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Mi perfil | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/perfil-paciente.css"
+        >
+
+    </head>
+
+    <body>
+
+        <!-- ===============
+            ENCABEZADO
+        ================ -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Paciente
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- ========================
+            ESTRUCTURA PRINCIPAL
+        ========================= -->
+        <div class="dashboard-layout">
+
+
+            <!-- ========================
+                MENÚ LATERAL
+            ========================= -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <a
+                            href="dashboard-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="citas-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Mis citas
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="solicitar-cita.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                ➕
+                            </span>
+
+                            <span>
+                                Solicitar cita
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="historial-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Mi historial clínico
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="tratamientos-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Mis tratamientos
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="perfil-paciente.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                👤
+                            </span>
+
+                            <span>
+                                Mi perfil
+                            </span>
+
+                        </a>
+
+
+                    </nav>
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+            </aside>
+
+
+
+            <!-- ========================
+                CONTENIDO
+            ========================= -->
+            <main class="dashboard-content">
+
+
+                <!-- TÍTULO -->
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Mi perfil
+                        </h2>
+
+                        <p>
+                            Consulta y actualiza tus datos personales.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ========================
+                    INFORMACIÓN PERSONAL
+                ========================= -->
+                <section class="dashboard-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Información personal
+                            </h2>
+
+                            <p>
+                                Datos registrados en el sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-grid">
+
+
+                        <!-- NOMBRE -->
+                        <div class="form-group">
+
+                            <label for="nombre">
+                                Nombre completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                placeholder="Ingresa tu nombre completo"
+                            >
+
+                        </div>
+
+
+                        <!-- DOCUMENTO -->
+                        <div class="form-group">
+
+                            <label for="documento">
+                                Documento
+                            </label>
+
+                            <input
+                                type="text"
+                                id="documento"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <!-- TELÉFONO -->
+                        <div class="form-group">
+
+                            <label for="telefono">
+                                Teléfono
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                placeholder="Ingresa tu teléfono"
+                            >
+
+                        </div>
+
+
+                        <!-- CORREO -->
+                        <div class="form-group">
+
+                            <label for="correo">
+                                Correo electrónico
+                            </label>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                placeholder="Ingresa tu correo electrónico"
+                            >
+
+                        </div>
+
+
+                        <!-- FECHA DE NACIMIENTO -->
+                        <div class="form-group">
+
+                            <label for="fechaNacimiento">
+                                Fecha de nacimiento
+                            </label>
+
+                            <input
+                                type="date"
+                                id="fechaNacimiento"
+                            >
+
+                        </div>
+
+
+                        <!-- TIPO DE SANGRE -->
+                        <div class="form-group">
+
+                            <label for="tipoSangre">
+                                Tipo de sangre
+                            </label>
+
+                            <select id="tipoSangre">
+
+                                <option value="">
+                                    Selecciona tu tipo de sangre
+                                </option>
+
+                                <option value="A+">
+                                    A+
+                                </option>
+
+                                <option value="A-">
+                                    A-
+                                </option>
+
+                                <option value="B+">
+                                    B+
+                                </option>
+
+                                <option value="B-">
+                                    B-
+                                </option>
+
+                                <option value="AB+">
+                                    AB+
+                                </option>
+
+                                <option value="AB-">
+                                    AB-
+                                </option>
+
+                                <option value="O+">
+                                    O+
+                                </option>
+
+                                <option value="O-">
+                                    O-
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- DIRECCIÓN -->
+                        <div class="form-group form-group-full">
+
+                            <label for="direccion">
+                                Dirección
+                            </label>
+
+                            <input
+                                type="text"
+                                id="direccion"
+                                placeholder="Ingresa tu dirección"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                        >
+                            Guardar cambios
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ========================
+                    SEGURIDAD
+                ========================= -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Seguridad de la cuenta
+                            </h2>
+
+                            <p>
+                                Administra la seguridad de tu cuenta.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="security-option">
+
+                        <div>
+
+                            <strong>
+                                Contraseña
+                            </strong>
+
+                            <p>
+                                Cambia periódicamente tu contraseña
+                                para mantener segura tu cuenta.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                        >
+                            Cambiar contraseña
+                        </button>
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+
+
+        <!-- ========================
+            FOOTER
+        ========================= -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+
+        <!-- ========================
+            JAVASCRIPT
+        ========================= -->
+        <script src="../js/perfil-paciente.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+

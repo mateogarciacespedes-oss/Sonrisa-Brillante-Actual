@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+    <head>
+
+
+        <meta charset="UTF-8">
+
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+
+        <title>Tratamientos | Sonrisa Brillante</title>
+
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+
+        <link
+            rel="stylesheet"
+            href="../css/tratamientos-odontologo.css"
+        >
+
+
+    </head>
+
+    <body>
+
+
+        <!-- ENCABEZADO -->
+        <header class="dashboard-header">
+
+
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+            
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+
+                <strong id="nombreUsuario">
+                    Odontólogo
+                </strong>
+
+
+            </div>
+
+
+        </header>
+
+
+        <!-- ESTRUCTURA PRINCIPAL -->
+        <div class="dashboard-layout">
+
+
+            <!-- MENÚ LATERAL -->
+            <aside class="sidebar">
+
+
+                <div class="sidebar-menu">
+
+
+                    <nav>
+
+
+                        <a
+                            href="dashboard-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+
+                            <span>
+                                Dashboard
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="citas-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+
+                            <span>
+                                Mis citas
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="pacientes-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+
+                            <span>
+                                Pacientes
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="historial-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="tratamientos-odontologo.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="registrar-evolucion.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📝
+                            </span>
+
+
+                            <span>
+                                Registrar evolución
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="servicios-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+
+                            <span>
+                                Servicios
+                            </span>
+
+
+                        </a>
+
+
+                    </nav>
+
+
+                </div>
+
+
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+
+                </a>
+
+
+            </aside>
+
+
+            <!-- CONTENIDO -->
+            <main class="dashboard-content">
+
+
+                <div class="page-heading">
+
+
+                    <div>
+
+
+                        <h2>
+                            Tratamientos
+                        </h2>
+
+
+                        <p>
+                            Consulta y gestiona los tratamientos de tus pacientes.
+                        </p>
+
+
+                    </div>
+
+
+                    <a
+                        href="registrar-evolucion.html"
+                        class="btn-principal"
+                    >
+                        + Registrar evolución
+                    </a>
+
+
+                </div>
+
+
+                <!-- BUSCADOR -->
+                <section class="search-section">
+
+
+                    <div class="search-box">
+
+
+                        <label for="buscarTratamiento">
+                            Buscar paciente
+                        </label>
+
+
+                        <input
+                            type="search"
+                            id="buscarTratamiento"
+                            placeholder="Buscar por nombre o documento"
+                        >
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- TRATAMIENTOS -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+
+                        <div>
+
+
+                            <h2>
+                                Tratamientos registrados
+                            </h2>
+
+                            <p>
+                                Tratamientos asignados a los pacientes.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="treatments-table">
+
+
+                        <div class="table-row table-header">
+
+
+                            <span>
+                                Paciente
+                            </span>
+
+
+                            <span>
+                                Tratamiento
+                            </span>
+
+
+                            <span>
+                                Diagnóstico
+                            </span>
+
+
+                            <span>
+                                Estado
+                            </span>
+
+
+                            <span>
+                                Acción
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-row">
+
+
+                            <span>
+                                Juan Pérez Gómez
+                            </span>
+
+
+                            <span>
+                                Restauración dental
+                            </span>
+
+
+                            <span>
+                                Caries dental
+                            </span>
+
+
+                            <span class="status active">
+                                En proceso
+                            </span>
+
+
+                            <span class="actions">
+
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-row">
+
+
+                            <span>
+                                Laura Gómez
+                            </span>
+
+
+                            <span>
+                                Ortodoncia
+                            </span>
+
+
+                            <span>
+                                Maloclusión dental
+                            </span>
+
+
+                            <span class="status active">
+                                En proceso
+                            </span>
+
+
+                            <span class="actions">
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-row">
+
+
+                            <span>
+                                Carlos Rodríguez
+                            </span>
+
+
+                            <span>
+                                Blanqueamiento
+                            </span>
+
+
+                            <span>
+                                Manchas dentales
+                            </span>
+
+
+                            <span class="status completed">
+                                Finalizado
+                            </span>
+
+
+                            <span class="actions">
+
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="table-row">
+
+
+                            <span>
+                                Ana Torres
+                            </span>
+
+
+                            <span>
+                                Restauración dental
+                            </span>
+
+
+                            <span>
+                                Caries dental
+                            </span>
+
+
+                            <span class="status pending">
+                                Pendiente
+                            </span>
+
+
+                            <span class="actions">
+
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <!-- =====================
+            FOOTER 
+        ====================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/tratamientos-odontologo.js"></script>
+
+
+    </body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+

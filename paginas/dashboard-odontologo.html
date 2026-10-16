@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Dashboard Odontólogo | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/dashboard-odontologo.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+
+            <div class="brand">
+
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+
+                <div>
+
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="user-info">
+
+
+                <span>
+                    👤
+                </span>
+
+
+                <strong id="nombreUsuario">
+                    Odontólogo
+                </strong>
+
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+
+                <div class="sidebar-menu">
+
+
+                    <nav>
+
+
+                        <!-- DASHBOARD -->
+                        <a
+                            href="dashboard-odontologo.html"
+                            class="sidebar-link active"
+                        >
+
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+
+                            <span>
+                                Dashboard
+                            </span>
+
+
+                        </a>
+
+
+                        <!-- MIS CITAS -->
+                        <a
+                            href="citas-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+
+                            <span>
+                                Mis citas
+                            </span>
+
+
+                        </a>
+
+
+                        <!-- PACIENTES -->
+                        <a
+                            href="pacientes-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+
+                            <span>
+                                Pacientes
+                            </span>
+
+
+                        </a>
+
+
+                        <!-- HISTORIAL CLÍNICO -->
+                        <a
+                            href="historial-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+
+                        </a>
+
+
+                        <!-- TRATAMIENTOS -->
+                        <a
+                            href="tratamientos-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+
+                        </a>
+
+
+                        <!-- EVOLUCIÓN -->
+                        <a
+                            href="evolucion-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                📝
+                            </span>
+
+
+                            <span>
+                                Registrar evolución
+                            </span>
+
+
+                        </a>
+
+
+                        <!-- SERVICIOS -->
+                        <a
+                            href="servicios-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+
+                            <span>
+                                Servicios
+                            </span>
+
+
+                        </a>
+
+
+                    </nav>
+
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+
+                </a>
+
+
+            </aside>
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- TÍTULO -->
+                <div class="page-heading">
+
+
+                    <div>
+
+
+                        <h2>
+                            Dashboard
+                        </h2>
+
+
+                        <p>
+                            Resumen de tus citas y actividad clínica.
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- BOTÓN PRINCIPAL -->
+                    <a
+                        href="citas-odontologo.html"
+                        class="btn-principal"
+                    >
+
+                        Ver mis citas
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- =========================
+                    TARJETAS
+                ========================== -->
+                <section class="dashboard-cards">
+
+
+                    <!-- CITAS DE HOY -->
+                    <article class="dashboard-card">
+
+
+                        <div class="card-content">
+
+
+                            <p>
+                                Citas de hoy
+                            </p>
+
+
+                            <h3>
+                                8
+                            </h3>
+
+
+                        </div>
+
+
+                        <div class="card-icon">
+                            📅
+                        </div>
+
+
+                    </article>
+
+
+                    <!-- PACIENTES -->
+                    <article class="dashboard-card">
+
+
+                        <div class="card-content">
+
+
+                            <p>
+                                Pacientes atendidos
+                            </p>
+
+
+                            <h3>
+                                42
+                            </h3>
+
+
+                        </div>
+
+
+                        <div class="card-icon">
+                            👥
+                        </div>
+
+
+                    </article>
+
+
+                    <!-- TRATAMIENTOS -->
+                    <article class="dashboard-card">
+
+
+                        <div class="card-content">
+
+
+                            <p>
+                                Tratamientos activos
+                            </p>
+
+
+                            <h3>
+                                15
+                            </h3>
+
+
+                        </div>
+
+
+                        <div class="card-icon">
+                            💊
+                        </div>
+
+
+                    </article>
+
+
+                    <!-- CITAS PENDIENTES -->
+                    <article class="dashboard-card">
+
+
+                        <div class="card-content">
+
+
+                            <p>
+                                Citas pendientes
+                            </p>
+
+
+                            <h3>
+                                5
+                            </h3>
+
+
+                        </div>
+
+
+                        <div class="card-icon">
+                            ⏳
+                        </div>
+
+
+                    </article>
+
+
+
+                </section>
+
+
+                <!-- =========================
+                    PRÓXIMAS CITAS
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+
+                        <div>
+
+
+                            <h2>
+                                Próximas citas
+                            </h2>
+
+
+                            <p>
+                                Citas asignadas para hoy.
+                            </p>
+
+
+                        </div>
+
+
+                        <!-- BOTÓN PRINCIPAL -->
+                        <a
+                            href="citas-odontologo.html"
+                            class="btn-principal"
+                        >
+
+                            Ver todas
+
+                        </a>
+
+
+                    </div>
+
+
+                    <!-- TABLA -->
+                    <div class="appointments-table">
+
+
+
+                        <!-- ENCABEZADO -->
+                        <div class="table-row table-header">
+
+
+                            <span>
+                                Paciente
+                            </span>
+
+
+                            <span>
+                                Hora
+                            </span>
+
+
+                            <span>
+                                Motivo
+                            </span>
+
+
+                            <span>
+                                Estado
+                            </span>
+
+
+                        </div>
+
+
+                        <!-- CITA 1 -->
+                        <div class="table-row">
+
+
+                            <span>
+                                Laura Gómez
+                            </span>
+
+
+                            <span>
+                                09:00 AM
+                            </span>
+
+
+                            <span>
+                                Consulta general
+                            </span>
+
+
+                            <span class="status confirmed">
+                                Confirmada
+                            </span>
+
+
+                        </div>
+
+
+                        <!-- CITA 2 -->
+                        <div class="table-row">
+
+
+                            <span>
+                                Carlos Rodríguez
+                            </span>
+
+
+                            <span>
+                                10:30 AM
+                            </span>
+
+
+                            <span>
+                                Limpieza dental
+                            </span>
+
+
+                            <span class="status pending">
+                                Pendiente
+                            </span>
+
+
+                        </div>
+
+
+                        <!-- CITA 3 -->
+                        <div class="table-row">
+
+
+                            <span>
+                                Ana Torres
+                            </span>
+
+
+                            <span>
+                                02:00 PM
+                            </span>
+
+
+                            <span>
+                                Control de tratamiento
+                            </span>
+
+
+                            <span class="status confirmed">
+                                Confirmada
+                            </span>
+
+
+                        </div>
+
+
+                        <!-- CITA 4 -->
+                        <div class="table-row">
+
+
+                            <span>
+                                Andrés Martínez
+                            </span>
+
+
+                            <span>
+                                03:30 PM
+                            </span>
+
+
+                            <span>
+                                Revisión dental
+                            </span>
+
+
+                            <span class="status cancelled">
+                                Cancelada
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =========================
+                    ACCIONES RÁPIDAS
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+
+                        <div>
+
+
+                            <h2>
+                                Acciones rápidas
+                            </h2>
+
+
+                            <p>
+                                Accesos frecuentes para la atención odontológica.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <!-- VER PACIENTES -->
+                        <a
+                            href="pacientes-odontologo.html"
+                            class="quick-action"
+                        >
+
+
+                            <span>
+                                👥
+                            </span>
+
+
+                            <strong>
+                                Ver pacientes
+                            </strong>
+
+
+                            <small>
+                                Consultar pacientes asignados
+                            </small>
+
+
+                        </a>
+
+
+                        <!-- HISTORIAL -->
+                        <a
+                            href="historial-odontologo.html"
+                            class="quick-action"
+                        >
+
+
+                            <span>
+                                📋
+                            </span>
+
+
+                            <strong>
+                                Historial clínico
+                            </strong>
+
+
+                            <small>
+                                Consultar información clínica
+                            </small>
+
+
+                        </a>
+
+
+                        <!-- EVOLUCIÓN -->
+                        <a
+                            href="evolucion-odontologo.html"
+                            class="quick-action"
+                        >
+
+
+                            <span>
+                                📝
+                            </span>
+
+
+                            <strong>
+                                Registrar evolución
+                            </strong>
+
+                            <small>
+                                Registrar observaciones del paciente
+                            </small>
+
+
+                        </a>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+
+
+        <!-- =========================
+            FOOTER
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/dashboard-odontologo.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

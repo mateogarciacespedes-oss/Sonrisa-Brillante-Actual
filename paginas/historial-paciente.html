@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Mi historial clínico | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/historial-paciente.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Paciente
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <!-- DASHBOARD -->
+                        <a
+                            href="dashboard-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+                        <!-- MIS CITAS -->
+                        <a
+                            href="citas-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Mis citas
+                            </span>
+
+                        </a>
+
+
+                        <!-- SOLICITAR CITA -->
+                        <a
+                            href="solicitar-cita.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                ➕
+                            </span>
+
+                            <span>
+                                Solicitar cita
+                            </span>
+
+                        </a>
+
+
+                        <!-- HISTORIAL -->
+                        <a
+                            href="historial-paciente.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Mi historial clínico
+                            </span>
+
+                        </a>
+
+
+                        <!-- TRATAMIENTOS -->
+                        <a
+                            href="tratamientos-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Mis tratamientos
+                            </span>
+
+                        </a>
+
+
+                        <!-- PERFIL -->
+                        <a
+                            href="perfil-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👤
+                            </span>
+
+                            <span>
+                                Mi perfil
+                            </span>
+
+                        </a>
+
+
+                    </nav>
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+
+            </aside>
+
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- ENCABEZADO -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Mi historial clínico
+                        </h2>
+
+                        <p>
+                            Consulta la información clínica registrada durante tus consultas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                    INFORMACIÓN DEL PACIENTE
+                ========================== -->
+                <section class="dashboard-section patient-summary">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Información del paciente
+                            </h2>
+
+                            <p>
+                                Datos básicos registrados en el sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="patient-data">
+
+
+                        <div class="data-item">
+
+                            <span>
+                                Nombre completo
+                            </span>
+
+                            <strong>
+                                Laura Gómez
+                            </strong>
+
+                        </div>
+
+
+                        <div class="data-item">
+
+                            <span>
+                                Documento
+                            </span>
+
+                            <strong>
+                                1094567890
+                            </strong>
+
+                        </div>
+
+
+                        <div class="data-item">
+
+                            <span>
+                                Fecha de nacimiento
+                            </span>
+
+                            <strong>
+                                15/04/1998
+                            </strong>
+
+                        </div>
+
+
+                        <div class="data-item">
+
+                            <span>
+                                Tipo de sangre
+                            </span>
+
+                            <strong>
+                                O+
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                    HISTORIAL
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Consultas registradas
+                            </h2>
+
+                            <p>
+                                Historial de atenciones odontológicas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="clinical-table">
+
+
+                        <!-- ENCABEZADO -->
+                        <div class="table-row table-header">
+
+                            <span>
+                                Fecha
+                            </span>
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <span>
+                                Diagnóstico
+                            </span>
+
+                            <span>
+                                Tratamiento
+                            </span>
+
+                            <span>
+                                Acción
+                            </span>
+
+                        </div>
+
+
+                        <!-- REGISTRO 1 -->
+                        <div class="table-row">
+
+                            <span>
+                                08/08/2026
+                            </span>
+
+                            <span>
+                                Dra. Martínez
+                            </span>
+
+                            <span>
+                                Maloclusión dental
+                            </span>
+
+                            <span>
+                                Ortodoncia
+                            </span>
+
+                            <span>
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- REGISTRO 2 -->
+                        <div class="table-row">
+
+                            <span>
+                                15/07/2026
+                            </span>
+
+                            <span>
+                                Dr. Pérez
+                            </span>
+
+                            <span>
+                                Caries dental
+                            </span>
+
+                            <span>
+                                Restauración dental
+                            </span>
+
+                            <span>
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- REGISTRO 3 -->
+                        <div class="table-row">
+
+                            <span>
+                                10/06/2026
+                            </span>
+
+                            <span>
+                                Dra. Martínez
+                            </span>
+
+                            <span>
+                                Manchas dentales
+                            </span>
+
+                            <span>
+                                Blanqueamiento
+                            </span>
+
+                            <span>
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                    ÚLTIMA EVOLUCIÓN
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Última evolución registrada
+                            </h2>
+
+                            <p>
+                                Observaciones realizadas por el odontólogo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evolution-box">
+
+
+                        <div class="evolution-date">
+
+                            <span>
+                                📅
+                            </span>
+
+                            <strong>
+                                08/08/2026
+                            </strong>
+
+                        </div>
+
+
+                        <p>
+                            El paciente presenta evolución favorable.
+                            Se recomienda continuar con el tratamiento de ortodoncia
+                            y asistir a los controles programados.
+                        </p>
+
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <!-- =========================
+            FOOTER
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/historial-paciente.js"></script>
+
+
+    </body>
+
+</html>

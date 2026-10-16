@@ -1,0 +1,348 @@
+/* ========================================
+   ESTRUCTURA GENERAL
+======================================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+.dashboard-header {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    font-size: 30px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* ========================================
+   ESTRUCTURA PRINCIPAL
+======================================== */
+.dashboard-layout {
+    min-height: calc(100vh - 125px);
+    display: flex;
+}
+
+
+/* ========================================
+   MENÚ LATERAL
+======================================== */
+.sidebar {
+    width: 230px;
+    padding: 25px 15px;
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: var(--color-background);
+}
+
+.sidebar-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.menu-icon {
+    width: 24px;
+    text-align: center;
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: var(--color-danger);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.logout-link:hover {
+    background-color: #FEF2F2;
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+.dashboard-content {
+    flex: 1;
+    padding: 35px;
+}
+
+
+/* ========================================
+   ENCABEZADO DE PÁGINA
+======================================== */
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.page-heading h2 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+
+/* ========================================
+   SECCIONES
+======================================== */
+.dashboard-section {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin: 0 0 6px;
+    font-size: 21px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+/* ========================================
+   INFORMACIÓN DEL PACIENTE
+======================================== */
+.patient-data {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.data-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 15px;
+    background-color: var(--color-background);
+    border-radius: 8px;
+}
+
+.data-item span {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+.data-item strong {
+    font-size: 15px;
+}
+
+
+/* ========================================
+   TABLA CLÍNICA
+======================================== */
+.clinical-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns:
+        1fr
+        1.2fr
+        1.5fr
+        1.4fr
+        0.7fr;
+
+    gap: 15px;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table-header {
+    font-weight: bold;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+/* ========================================
+   BOTÓN DE ACCIÓN
+======================================== */
+.btn-action {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white);
+    color: var(--color-text);
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-action:hover {
+    background-color: var(--color-background);
+}
+
+
+/* ========================================
+   ÚLTIMA EVOLUCIÓN
+======================================== */
+.evolution-box {
+    padding: 20px;
+    background-color: var(--color-background);
+    border-radius: 10px;
+}
+
+.evolution-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.evolution-date span {
+    font-size: 20px;
+}
+
+.evolution-date strong {
+    font-size: 14px;
+}
+
+.evolution-box p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+.dashboard-footer {
+    padding: 12px;
+    text-align: center;
+    color: var(--color-text-secondary);
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 1000px) {
+
+    .patient-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .table-row {
+        min-width: 800px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        padding: 12px 18px;
+    }
+
+    .user-info strong {
+        display: none;
+    }
+
+    .dashboard-content {
+        padding: 18px;
+    }
+
+    .patient-data {
+        grid-template-columns: 1fr;
+    }
+
+}

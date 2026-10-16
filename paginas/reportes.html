@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+    
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Reportes | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/reportes.css"
+        >
+
+    </head>
+
+    <body>
+
+    <!-- =========================
+        ENCABEZADO
+    ========================== -->
+
+    <header class="dashboard-header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🦷
+            </div>
+
+            <div>
+
+                <h1>
+                    Sonrisa Brillante
+                </h1>
+
+                <p>
+                    Sistema de Gestión Odontológica
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="user-info">
+
+            <span>
+                👤
+            </span>
+
+            <strong id="nombreUsuario">
+                Administrador
+            </strong>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+        ESTRUCTURA PRINCIPAL
+    ========================== -->
+    <div class="dashboard-layout">
+
+
+        <!-- =========================
+            MENÚ LATERAL
+        ========================== -->
+        <aside class="sidebar">
+
+            <div class="sidebar-menu">
+
+                <nav>
+
+                        <a href="dashboard.html" class="sidebar-link">
+                        <span class="menu-icon">📊</span>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a href="usuarios.html" class="sidebar-link">
+                        <span class="menu-icon">👥</span>
+                        <span>Usuarios</span>
+                    </a>
+
+                    <a href="pacientes.html" class="sidebar-link">
+                        <span class="menu-icon">👥</span>
+                        <span>Pacientes</span>
+                    </a>
+
+                    <a href="citas.html" class="sidebar-link">
+                        <span class="menu-icon">📅</span>
+                        <span>Citas</span>
+                    </a>
+
+                    <a href="servicios.html" class="sidebar-link">
+                        <span class="menu-icon">🦷</span>
+                        <span>Servicios</span>
+                    </a>
+
+                    <a href="tratamientos.html" class="sidebar-link">
+                        <span class="menu-icon">💊</span>
+                        <span>Tratamientos</span>
+                    </a>
+
+                    <a href="historial.html" class="sidebar-link">
+                        <span class="menu-icon">📋</span>
+                        <span>Historial clínico</span>
+                    </a>
+
+                    <a href="reportes.html" class="sidebar-link active">
+                        <span class="menu-icon">📈</span>
+                        <span>Reportes</span>
+                    </a>
+
+
+                </nav>
+
+            </div>
+
+            <a
+                href="../index.html"
+                class="logout-link"
+            >
+
+                <span class="menu-icon">🚪</span>
+
+                <span>Cerrar sesión</span>
+            </a>
+
+        </aside>
+
+
+        <!-- =========================
+            CONTENIDO PRINCIPAL
+        ========================== -->
+        <main class="dashboard-content">
+
+            <!-- =========================
+                ENCABEZADO
+            ========================== -->
+            <div class="page-heading">
+
+                <div>
+
+                    <h2>
+                        Reportes
+                    </h2>
+
+                    <p>
+                        Consulta los principales indicadores de la clínica.
+                    </p>
+
+                </div>
+
+                <button class="btn-principal">
+                    Generar reporte
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                FILTROS
+            ========================== -->
+            <section class="filters-section">
+
+                <div class="filter-group">
+
+                    <label for="fechaInicio">
+                        Fecha inicial
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fechaInicio"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="fechaFin">
+                        Fecha final
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fechaFin"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="tipoReporte">
+                        Tipo de reporte
+                    </label>
+
+                    <select id="tipoReporte">
+
+                        <option value="general">
+                            General
+                        </option>
+
+                        <option value="citas">
+                            Citas
+                        </option>
+
+                        <option value="pacientes">
+                            Pacientes
+                        </option>
+
+                        <option value="servicios">
+                            Servicios
+                        </option>
+
+                        <option value="ingresos">
+                            Ingresos
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button class="btn btn-primary filter-btn">
+                    Consultar
+                </button>
+
+            </section>
+
+            <!-- =========================
+                INDICADORES
+            ========================== -->
+            <section class="stats-grid">
+
+                <!-- PACIENTES -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total pacientes
+                        </p>
+
+                        <h3>
+                            248
+                        </h3>
+
+                    </div>
+
+                </article>
+
+                <!-- CITAS -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Citas realizadas
+                        </p>
+
+                        <h3>
+                            186
+                        </h3>
+
+                    </div>
+
+                </article>
+
+                <!-- TRATAMIENTOS -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        💊
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Tratamientos activos
+                        </p>
+
+                        <h3>
+                            42
+                        </h3>
+
+                    </div>
+
+                </article>
+
+                <!-- INGRESOS -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Ingresos del período
+                        </p>
+
+                        <h3>
+                            $12.480.000
+                        </h3>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =========================
+                RESUMEN DE CITAS
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Resumen de citas
+                        </h2>
+
+                        <p>
+                            Estado de las citas registradas durante el período.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="appointments-summary">
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Confirmadas
+                        </span>
+
+                        <strong>
+                            124
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Pendientes
+                        </span>
+
+                        <strong>
+                            38
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Canceladas
+                        </span>
+
+                        <strong>
+                            24
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                SERVICIOS MÁS UTILIZADOS
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Servicios más utilizados
+                        </h2>
+
+                        <p>
+                            Servicios con mayor número de registros.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="services-list">
+
+
+                    <div class="service-item">
+
+                        <div>
+
+                            <strong>
+                                Limpieza dental
+                            </strong>
+
+                            <span>
+                                68 servicios
+                            </span>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 85%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="service-item">
+
+                        <div>
+
+                            <strong>
+                                Consulta odontológica
+                            </strong>
+
+                            <span>
+                                54 servicios
+                            </span>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 68%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="service-item">
+
+                        <div>
+
+                            <strong>
+                                Blanqueamiento dental
+                            </strong>
+
+                            <span>
+                                39 servicios
+                            </span>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 49%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="service-item">
+
+                        <div>
+
+                            <strong>
+                                Extracción dental
+                            </strong>
+
+                            <span>
+                                25 servicios
+                            </span>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 31%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================
+        PIE DE PÁGINA
+    ========================== -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/reportes.js"></script>
+
+        
+    </body>
+
+</html>
+
+
+
+

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>
+            Tratamientos | Sonrisa Brillante
+        </title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/tratamientos-recepcionista.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Recepcionista
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <!-- DASHBOARD -->
+                        <a
+                            href="dashboard-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- PACIENTES -->
+                        <a
+                            href="pacientes-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+                            <span>
+                                Pacientes
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- CITAS -->
+                        <a
+                            href="citas-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Citas
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- SERVICIOS -->
+                        <a
+                            href="servicios-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+                            <span>
+                                Servicios
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- TRATAMIENTOS -->
+                        <a
+                            href="tratamientos-recepcionista.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- HISTORIAL CLÍNICO -->
+                        <a
+                            href="historial-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+                        </a>
+
+
+                    </nav>
+
+                </div>
+
+
+
+                <!-- =========================
+                    CERRAR SESIÓN
+                ========================== -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+
+            </aside>
+
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- =========================
+                    TÍTULO
+                ========================== -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Tratamientos
+                        </h2>
+
+                        <p>
+                            Consulta de tratamientos odontológicos registrados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                    BÚSQUEDA
+                ========================== -->
+                <section class="search-section">
+
+                    <div class="search-box">
+
+                        <label for="buscarTratamiento">
+
+                            Buscar tratamiento
+
+                        </label>
+
+
+                        <input
+                            type="search"
+                            id="buscarTratamiento"
+                            placeholder="Buscar por nombre del tratamiento"
+                        >
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                    TRATAMIENTOS
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Tratamientos registrados
+                            </h2>
+
+                            <p>
+                                Información de los tratamientos disponibles.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="treatments-grid">
+
+
+                        <!-- =========================
+                            TRATAMIENTO 1
+                        ========================== -->
+                        <article class="treatment-card">
+
+                            <div class="treatment-icon">
+                                🦷
+                            </div>
+
+
+                            <div class="treatment-info">
+
+                                <h3>
+                                    Ortodoncia
+                                </h3>
+
+                                <p>
+                                    Tratamiento para corregir la posición
+                                    de los dientes y mejorar la mordida.
+                                </p>
+
+                            </div>
+
+
+                            <div class="treatment-details">
+
+                                <span>
+                                    ⏱ 18 meses
+                                </span>
+
+                                <strong>
+                                    $2.500.000
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =========================
+                            TRATAMIENTO 2
+                        ========================== -->
+                        <article class="treatment-card">
+
+                            <div class="treatment-icon">
+                                ✨
+                            </div>
+
+
+                            <div class="treatment-info">
+
+                                <h3>
+                                    Blanqueamiento
+                                </h3>
+
+                                <p>
+                                    Tratamiento estético para aclarar
+                                    el tono de los dientes.
+                                </p>
+
+                            </div>
+
+
+                            <div class="treatment-details">
+
+                                <span>
+                                    ⏱ 2 sesiones
+                                </span>
+
+                                <strong>
+                                    $450.000
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =========================
+                            TRATAMIENTO 3
+                        ========================== -->
+                        <article class="treatment-card">
+
+                            <div class="treatment-icon">
+                                🩺
+                            </div>
+
+
+                            <div class="treatment-info">
+
+                                <h3>
+                                    Tratamiento de caries
+                                </h3>
+
+                                <p>
+                                    Procedimiento para eliminar la caries
+                                    y restaurar el diente afectado.
+                                </p>
+
+                            </div>
+
+
+                            <div class="treatment-details">
+
+                                <span>
+                                    ⏱ 60 minutos
+                                </span>
+
+                                <strong>
+                                    $180.000
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =========================
+                            TRATAMIENTO 4
+                        ========================== -->
+                        <article class="treatment-card">
+
+                            <div class="treatment-icon">
+                                ❤️
+                            </div>
+
+
+                            <div class="treatment-info">
+
+                                <h3>
+                                    Tratamiento de encías
+                                </h3>
+
+                                <p>
+                                    Tratamiento para prevenir y controlar
+                                    enfermedades periodontales.
+                                </p>
+
+                            </div>
+
+
+                            <div class="treatment-details">
+
+                                <span>
+                                    ⏱ 3 sesiones
+                                </span>
+
+                                <strong>
+                                    $350.000
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+
+
+        <!-- =========================
+            FOOTER
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/tratamientos-recepcionista.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+

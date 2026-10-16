@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Historial clínico | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/historial-recepcionista.css"
+        >
+
+    </head>
+
+    <body>
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Recepcionista
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+                        <!-- DASHBOARD -->
+                        <a
+                            href="dashboard-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+                        <!-- PACIENTES -->
+                        <a
+                            href="pacientes-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+                            <span>
+                                Pacientes
+                            </span>
+
+                        </a>
+
+
+                        <!-- CITAS -->
+                        <a
+                            href="citas-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Citas
+                            </span>
+
+                        </a>
+
+
+                        <!-- SERVICIOS -->
+                        <a
+                            href="servicios-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+                            <span>
+                                Servicios
+                            </span>
+
+                        </a>
+
+
+                        <!-- TRATAMIENTOS -->
+                        <a
+                            href="tratamientos-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+                        </a>
+
+
+                        <!-- HISTORIAL CLÍNICO -->
+                        <a
+                            href="historial-recepcionista.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+                        </a>
+
+                    </nav>
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+            </aside>
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+                <!-- ENCABEZADO -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Historial clínico
+                        </h2>
+
+                        <p>
+                            Consulta la información clínica de los pacientes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                    BÚSQUEDA
+                ========================== -->
+                <section class="search-section">
+
+                    <div class="search-box">
+
+                        <label for="buscarHistorial">
+                            Buscar paciente
+                        </label>
+
+                        <input
+                            type="search"
+                            id="buscarHistorial"
+                            placeholder="Buscar por nombre o documento"
+                        >
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                    HISTORIALES REGISTRADOS
+                ========================== -->
+                <section class="dashboard-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Historiales registrados
+                            </h2>
+
+                            <p>
+                                Información clínica registrada en el sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="clinical-table">
+
+
+                        <!-- ENCABEZADO -->
+                        <div class="table-row table-header">
+
+                            <span>
+                                Documento
+                            </span>
+
+                            <span>
+                                Paciente
+                            </span>
+
+                            <span>
+                                Última consulta
+                            </span>
+
+                            <span>
+                                Diagnóstico
+                            </span>
+
+                            <span>
+                                Tratamiento
+                            </span>
+
+                            <span>
+                                Acción
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- REGISTRO 1 -->
+                        <div class="table-row">
+
+                            <span>
+                                1094567890
+                            </span>
+
+                            <span>
+                                Laura Gómez
+                            </span>
+
+                            <span>
+                                08/08/2026
+                            </span>
+
+                            <span>
+                                Maloclusión dental
+                            </span>
+
+                            <span>
+                                Ortodoncia
+                            </span>
+
+                            <span class="actions">
+
+                                <button
+                                    type="button"
+                                    class="btn-action"
+                                >
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- REGISTRO 2 -->
+                        <div class="table-row">
+
+                            <span>
+                                1087654321
+                            </span>
+
+                            <span>
+                                Carlos Rodríguez
+                            </span>
+
+                            <span>
+                                07/08/2026
+                            </span>
+
+                            <span>
+                                Manchas dentales
+                            </span>
+
+                            <span>
+                                Blanqueamiento
+                            </span>
+
+                            <span class="actions">
+
+                                <button
+                                    type="button"
+                                    class="btn-action"
+                                >
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- REGISTRO 3 -->
+                        <div class="table-row">
+
+                            <span>
+                                1123456789
+                            </span>
+
+                            <span>
+                                Ana Torres
+                            </span>
+
+                            <span>
+                                06/08/2026
+                            </span>
+
+                            <span>
+                                Caries dental
+                            </span>
+
+                            <span>
+                                Restauración dental
+                            </span>
+
+                            <span class="actions">
+
+                                <button
+                                    type="button"
+                                    class="btn-action"
+                                >
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- REGISTRO 4 -->
+                        <div class="table-row">
+
+                            <span>
+                                1012345678
+                            </span>
+
+                            <span>
+                                Andrés Martínez
+                            </span>
+
+                            <span>
+                                05/08/2026
+                            </span>
+
+                            <span>
+                                Pieza dental afectada
+                            </span>
+
+                            <span>
+                                Extracción dental
+                            </span>
+
+                            <span class="actions">
+
+                                <button
+                                    type="button"
+                                    class="btn-action"
+                                >
+                                    Ver
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+
+
+        <!-- =========================
+            PIE DE PÁGINA
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+
+            </p>
+
+        </footer>
+
+
+
+        <!-- =========================
+            MODAL HISTORIAL CLÍNICO
+        ========================== -->
+        <div
+            class="modal-historial"
+            id="modalHistorial"
+        >
+
+            <div class="modal-contenido">
+
+
+                <!-- ENCABEZADO DEL MODAL -->
+                <div class="modal-header">
+
+                    <div>
+
+                        <h2>
+                            Información del historial
+                        </h2>
+
+                        <p>
+                            Información clínica registrada del paciente.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="modal-cerrar"
+                        id="cerrarModalHistorial"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================
+                    DATOS DEL HISTORIAL
+                ========================== -->
+                <div class="historial-datos">
+
+
+                    <div class="historial-dato">
+
+                        <span>
+                            Paciente
+                        </span>
+
+                        <strong id="pacienteHistorialModal">
+                        </strong>
+
+                    </div>
+
+
+                    <div class="historial-dato">
+
+                        <span>
+                            Documento
+                        </span>
+
+                        <strong id="documentoHistorialModal">
+                        </strong>
+
+                    </div>
+
+
+                    <div class="historial-dato">
+
+                        <span>
+                            Última consulta
+                        </span>
+
+                        <strong id="fechaHistorialModal">
+                        </strong>
+
+                    </div>
+
+
+                    <div class="historial-dato">
+
+                        <span>
+                            Diagnóstico
+                        </span>
+
+                        <strong id="diagnosticoHistorialModal">
+                        </strong>
+
+                    </div>
+
+
+                    <div class="historial-dato">
+
+                        <span>
+                            Tratamiento
+                        </span>
+
+                        <strong id="tratamientoHistorialModal">
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                    ACCIONES
+                ========================== -->
+                <div class="modal-acciones">
+
+                    <button
+                        type="button"
+                        class="btn-modal-primary"
+                        id="cerrarHistorial"
+                    >
+                        Cerrar
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/historial-recepcionista.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+

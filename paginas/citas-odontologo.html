@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+    <head>
+
+
+
+        <meta charset="UTF-8">
+
+
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+
+
+        <title>Mis citas | Sonrisa Brillante</title>
+
+
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+
+
+        <link
+            rel="stylesheet"
+            href="../css/citas-odontologo.css"
+        >
+
+
+
+    </head>
+
+
+
+    <body>
+
+
+
+        <!-- =========================
+         ENCABEZADO
+        ========================== -->
+
+        <header class="dashboard-header">
+
+
+
+            <div class="brand">
+
+
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+
+
+                <div>
+
+
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="user-info">
+
+
+
+                <span>
+                    👤
+                </span>
+
+
+
+                <strong id="nombreUsuario">
+                    Odontólogo
+                </strong>
+
+
+
+            </div>
+
+
+
+        </header>
+
+
+
+
+
+        <!-- =========================
+         ESTRUCTURA PRINCIPAL
+        ========================== -->
+
+        <div class="dashboard-layout">
+
+
+
+
+
+            <!-- =========================
+             MENÚ LATERAL
+            ========================== -->
+
+            <aside class="sidebar">
+
+
+
+                <div class="sidebar-menu">
+
+
+
+                    <nav>
+
+
+
+
+
+                        <!-- ============
+                         DASHBOARD 
+                        ============= -->
+
+                        <a
+                            href="dashboard-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+
+
+                            <span>
+                                Dashboard
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+                        <!-- =========
+                         MIS CITAS 
+                        ========== -->
+
+                        <a
+                            href="citas-odontologo.html"
+                            class="sidebar-link active"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+
+
+                            <span>
+                                Mis citas
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+                        <!-- =================
+                         PACIENTES 
+                        ================== -->
+
+                        <a
+                            href="pacientes-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+
+
+                            <span>
+                                Pacientes
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+                        <!-- ===================
+                         HISTORIAL CLÍNICO 
+                        ==================== -->
+
+                        <a
+                            href="historial-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+
+
+                        </a>
+
+
+
+
+
+                        <!-- ===================
+                         TRATAMIENTOS 
+                        ==================== -->
+
+                        <a
+                            href="tratamientos-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+
+
+                        </a>
+
+
+                        <!-- ==================
+                         EVOLUCIÓN 
+                        =================== -->
+                        <a
+                            href="evolucion-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                📝
+                            </span>
+
+
+                            <span>
+                                Registrar evolución
+                            </span>
+
+
+                        </a>
+
+
+                        <!-- ==================
+                         SERVICIOS
+                        =================== -->
+                        <a
+                            href="servicios-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+
+                            <span>
+                                Servicios
+                            </span>
+
+
+                        </a>
+
+
+                    </nav>
+
+
+                </div>
+
+
+                <!-- =========================
+                 CERRAR SESIÓN
+                ========================== -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+
+                </a>
+
+
+            </aside>
+
+
+            <!-- =========================
+             CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- =========================
+                 ENCABEZADO DE PÁGINA
+                ========================== -->
+                <div class="page-heading">
+
+
+                    <div>
+
+
+                        <h2>
+                            Mis citas
+                        </h2>
+
+
+                        <p>
+                            Consulta las citas asignadas a tu agenda.
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                 FILTROS
+                ========================== -->
+                <section class="search-section">
+
+
+                    <div class="filter-grid">
+
+
+                        <!-- =================
+                         FILTRO FECHA 
+                        ================== -->
+                        <div class="filter-group">
+
+
+                            <label for="fechaCita">
+                                Fecha
+                            </label>
+
+
+                            <input
+                                type="date"
+                                id="fechaCita"
+                            >
+
+
+                        </div>
+
+
+                        <!-- ====================
+                         FILTRO ESTADO 
+                        ===================== -->
+                        <div class="filter-group">
+
+
+                            <label for="estadoCita">
+                                Estado
+                            </label>
+
+
+                            <select id="estadoCita">
+
+
+                                <option value="">
+                                    Todos los estados
+                                </option>
+
+
+                                <option value="confirmada">
+                                    Confirmada
+                                </option>
+
+
+                                <option value="pendiente">
+                                    Pendiente
+                                </option>
+
+
+                                <option value="cancelada">
+                                    Cancelada
+                                </option>
+
+
+                            </select>
+
+
+                        </div>
+
+
+                        <!-- =================
+                         BUSCAR PACIENTE 
+                        ================== -->
+                        <div class="filter-group">
+
+
+                            <label for="buscarPaciente">
+                                Paciente
+                            </label>
+
+
+                            <input
+                                type="search"
+                                id="buscarPaciente"
+                                placeholder="Buscar paciente"
+                            >
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =========================
+                 LISTADO DE CITAS
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <!-- ENCABEZADO DE SECCIÓN -->
+                    <div class="section-heading">
+
+
+                        <div>
+
+
+                            <h2>
+                                Citas programadas
+                            </h2>
+
+
+                            <p>
+                                Citas asignadas a tu agenda.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =========================
+                         TABLA DE CITAS
+                    ========================== -->
+                    <div
+                        class="appointments-table"
+                        id="appointmentsTable"
+                    >
+
+
+                        <!--
+                            Las citas serán cargadas
+                            dinámicamente mediante
+                            citas-odontologo.js
+                        -->
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+        <!-- =========================
+         PIE DE PÁGINA
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+         JAVASCRIPT
+        ========================== -->
+        <script src="../js/citas-odontologo.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>
+            Dashboard Recepcionista | Sonrisa Brillante
+        </title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/dashboard-recepcionista.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Recepcionista
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <!-- ============
+                            DASHBOARD
+                        ============= -->
+                        <a
+                            href="dashboard-recepcionista.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- ===========
+                            PACIENTES
+                        ============ -->
+                        <a
+                            href="pacientes-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+                            <span>
+                                Pacientes
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- =============
+                            CITAS
+                        ============== -->
+                        <a
+                            href="citas-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Citas
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- ===============
+                            SERVICIOS
+                        ================ -->
+                        <a
+                            href="servicios-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+                            <span>
+                                Servicios
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- ================
+                            TRATAMIENTOS
+                        ================= -->
+                        <a
+                            href="tratamientos-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- ===================
+                            HISTORIAL CLÍNICO
+                        ==================== -->
+                        <a
+                            href="historial-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+                        </a>
+
+
+                    </nav>
+
+                </div>
+
+
+
+                <!-- ==============
+                    CERRAR SESIÓN
+                =============== -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+
+            </aside>
+
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- ===========
+                    TÍTULO
+                ============ -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Dashboard
+                        </h2>
+
+                        <p>
+                            Resumen de la atención y agenda de la clínica.
+                        </p>
+
+                    </div>
+
+
+                    <button class="btn-principal">
+                        + Nueva cita
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================
+                    TARJETAS
+                ========================== -->
+                <section class="dashboard-cards">
+
+
+                    <!-- ============
+                        PACIENTES
+                    ============= -->
+                    <article class="dashboard-card">
+
+                        <div class="card-content">
+
+                            <p>
+                                Pacientes registrados
+                            </p>
+
+                            <h3>
+                                120
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            👥
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ================
+                        CITAS DE HOY
+                    ================= -->
+                    <article class="dashboard-card">
+
+                        <div class="card-content">
+
+                            <p>
+                                Citas de hoy
+                            </p>
+
+                            <h3>
+                                18
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            📅
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================
+                        CITAS PENDIENTES
+                    =================== -->
+                    <article class="dashboard-card">
+
+                        <div class="card-content">
+
+                            <p>
+                                Citas pendientes
+                            </p>
+
+                            <h3>
+                                6
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            ⏳
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================
+                        CITAS CONFIRMADAS
+                    ================== -->
+                    <article class="dashboard-card">
+
+                        <div class="card-content">
+
+                            <p>
+                                Citas confirmadas
+                            </p>
+
+                            <h3>
+                                12
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            ✅
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+
+                <!-- =========================
+                    PRÓXIMAS CITAS
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Próximas citas
+                            </h2>
+
+                            <p>
+                                Citas programadas para hoy.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="citas-recepcionista.html"
+                            class="btn-principal"
+                        >
+                            Ver todas
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- =========
+                        TABLA
+                    ========== -->
+                    <div class="appointments-table">
+
+
+                        <!-- ============
+                            ENCABEZADO
+                        ============= -->
+                        <div class="table-row table-header">
+
+                            <span>
+                                Paciente
+                            </span>
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <span>
+                                Hora
+                            </span>
+
+                            <span>
+                                Estado
+                            </span>
+
+                        </div>
+
+
+                        <!-- =========================
+                            LAS CITAS SE CARGAN
+                            DINÁMICAMENTE CON JS
+                        ========================== -->
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =========================
+                    ACCIONES RÁPIDAS
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Acciones rápidas
+                            </h2>
+
+                            <p>
+                                Accesos frecuentes para la recepción.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="quick-actions">
+
+
+                        <a
+                            href="pacientes-recepcionista.html"
+                            class="quick-action"
+                        >
+
+                            <span>
+                                👥
+                            </span>
+
+                            <strong>
+                                Registrar paciente
+                            </strong>
+
+                            <small>
+                                Crear un nuevo registro
+                            </small>
+
+                        </a>
+
+
+
+                        <a
+                            href="citas-recepcionista.html"
+                            class="quick-action"
+                        >
+
+                            <span>
+                                📅
+                            </span>
+
+                            <strong>
+                                Agendar cita
+                            </strong>
+
+                            <small>
+                                Programar una nueva cita
+                            </small>
+
+                        </a>
+
+
+
+                        <a
+                            href="pacientes-recepcionista.html"
+                            class="quick-action"
+                        >
+
+                            <span>
+                                🔎
+                            </span>
+
+                            <strong>
+                                Buscar paciente
+                            </strong>
+
+                            <small>
+                                Consultar información
+                            </small>
+
+                        </a>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <!-- =========================
+            PIE DE PÁGINA
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/dashboard-recepcionista.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+
+

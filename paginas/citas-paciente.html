@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Mis citas | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/citas-paciente.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- ==============
+        ENCABEZADO 
+        =============== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Paciente
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <!-- =======================
+        ESTRUCTURA PRINCIPAL 
+        ======================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- ================
+            MENÚ LATERAL 
+            ================= -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+                        <a
+                            href="dashboard-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+                        <a
+                            href="citas-paciente.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Mis citas
+                            </span>
+
+                        </a>
+
+                        <a
+                            href="solicitar-cita.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                ➕
+                            </span>
+
+                            <span>
+                                Solicitar cita
+                            </span>
+
+                        </a>
+
+                        <a
+                            href="historial-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Mi historial clínico
+                            </span>
+
+                        </a>
+
+                        <a
+                            href="tratamientos-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Mis tratamientos
+                            </span>
+
+                        </a>
+
+                        <a
+                            href="perfil-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👤
+                            </span>
+
+                            <span>
+                                Mi perfil
+                            </span>
+
+                        </a>
+
+                    </nav>
+
+                </div>
+
+
+                <!-- ==================
+                CERRAR SESIÓN 
+                =================== -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+
+            </aside>
+
+
+            <!-- ======================
+            CONTENIDO PRINCIPAL 
+            ======================= -->
+            <main class="dashboard-content">
+
+                <!-- ==============
+                ENCABEZADO 
+                =============== -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Mis citas
+                        </h2>
+
+                        <p>
+                            Consulta y gestiona tus citas odontológicas.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="solicitar-cita.html"
+                        class="btn-principal"
+                    >
+                        + Solicitar cita
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================
+                PRÓXIMA CITA 
+                ================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Próxima cita
+                            </h2>
+
+                            <p>
+                                Información de tu próxima consulta.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="next-appointment">
+
+
+                        <div class="appointment-date">
+
+                            <span class="date-day">
+                                15
+                            </span>
+
+                            <span class="date-month">
+                                AGO
+                            </span>
+
+                        </div>
+
+
+                        <div class="appointment-details">
+
+                            <h3>
+                                Consulta odontológica
+                            </h3>
+
+                            <p>
+                                🦷 Dra. Martínez
+                            </p>
+
+                            <p>
+                                🕘 09:00 AM
+                            </p>
+
+                        </div>
+
+
+                        <div class="appointment-status">
+
+                            <span class="status confirmed">
+                                Confirmada
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- ==================
+                CITAS PROGRAMADAS 
+                =================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Citas programadas
+                            </h2>
+
+                            <p>
+                                Próximas citas registradas en el sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appointments-table">
+
+
+                        <!-- ============
+                        ENCABEZADO 
+                        ============= -->
+                        <div class="table-row table-header">
+
+                            <span>
+                                Fecha
+                            </span>
+
+                            <span>
+                                Servicio
+                            </span>
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <span>
+                                Hora
+                            </span>
+
+                            <span>
+                                Estado
+                            </span>
+
+                            <span>
+                                Acción
+                            </span>
+
+                        </div>
+
+
+                        <!-- =========
+                        CITA 1 
+                        ========== -->
+                        <div class="table-row">
+
+                            <span>
+                                15/08/2026
+                            </span>
+
+                            <span>
+                                Consulta odontológica
+                            </span>
+
+                            <span>
+                                Dra. Martínez
+                            </span>
+
+                            <span>
+                                09:00 AM
+                            </span>
+
+                            <span>
+
+                                <span class="status confirmed">
+                                    Confirmada
+                                </span>
+
+                            </span>
+
+                            <span class="actions">
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                                <button class="btn-action cancel">
+                                    Cancelar
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- =========
+                        CITA 2 
+                        ========== -->
+                        <div class="table-row">
+
+                            <span>
+                                22/08/2026
+                            </span>
+
+                            <span>
+                                Limpieza dental
+                            </span>
+
+                            <span>
+                                Dr. Pérez
+                            </span>
+
+                            <span>
+                                10:30 AM
+                            </span>
+
+                            <span>
+
+                                <span class="status pending">
+                                    Pendiente
+                                </span>
+
+                            </span>
+
+                            <span class="actions">
+
+                                <button class="btn-action">
+                                    Ver
+                                </button>
+
+                                <button class="btn-action cancel">
+                                    Cancelar
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- ==================
+                HISTORIAL DE CITAS 
+                =================== -->
+                <section class="dashboard-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Historial de citas
+                            </h2>
+
+                            <p>
+                                Consultas realizadas anteriormente.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="appointments-table">
+
+
+                        <div class="table-row table-header">
+
+                            <span>
+                                Fecha
+                            </span>
+
+                            <span>
+                                Servicio
+                            </span>
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <span>
+                                Hora
+                            </span>
+
+                            <span>
+                                Estado
+                            </span>
+
+                        </div>
+
+
+                        <!-- ===============
+                        CITA ANTERIOR 1 
+                        ================ -->
+                        <div class="table-row">
+
+                            <span>
+                                08/08/2026
+                            </span>
+
+                            <span>
+                                Consulta odontológica
+                            </span>
+
+                            <span>
+                                Dra. Martínez
+                            </span>
+
+                            <span>
+                                02:00 PM
+                            </span>
+
+                            <span>
+
+                                <span class="status completed">
+                                    Atendida
+                                </span>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- ================
+                        CITA ANTERIOR 2 
+                        ================= -->
+                        <div class="table-row">
+
+                            <span>
+                                01/08/2026
+                            </span>
+
+                            <span>
+                                Limpieza dental
+                            </span>
+
+                            <span>
+                                Dr. Pérez
+                            </span>
+
+                            <span>
+                                11:00 AM
+                            </span>
+
+                            <span>
+
+                                <span class="status completed">
+                                    Atendida
+                                </span>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- ==============
+                        CITA ANTERIOR 3 
+                        =============== -->
+                        <div class="table-row">
+
+                            <span>
+                                25/07/2026
+                            </span>
+
+                            <span>
+                                Control odontológico
+                            </span>
+
+                            <span>
+                                Dra. Martínez
+                            </span>
+
+                            <span>
+                                09:30 AM
+                            </span>
+
+                            <span>
+
+                                <span class="status cancelled">
+                                    Cancelada
+                                </span>
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <!-- ==============
+        FOOTER 
+        =============== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <script src="../js/citas-paciente.js"></script>
+
+
+    </body>
+
+</html>

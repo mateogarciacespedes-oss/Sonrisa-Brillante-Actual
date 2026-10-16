@@ -1,0 +1,499 @@
+/* ==================================================
+   VARIABLES DEL PROYECTO
+================================================== */
+:root {
+    --color-primary: #2563EB;
+    --color-primary-dark: #1D4ED8;
+    --color-background: #F5F7FA;
+    --color-text: #1F2937;
+    --color-text-secondary: #6B7280;
+    --color-white: #FFFFFF;
+    --color-border: #D1D5DB;
+    --color-success: #16A34A;
+    --color-warning: #F59E0B;
+    --color-danger: #DC2626;
+}
+
+
+/* ==================================================
+   CONFIGURACIÓN GENERAL
+================================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==================================================
+   ENCABEZADO
+================================================== */
+.main-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: 18px 40px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   CONTENEDOR DEL LOGIN
+================================================== */
+.login-container {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+
+/* ==================================================
+   TARJETA DEL LOGIN
+================================================== */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==================================================
+   ENCABEZADO DEL LOGIN
+================================================== */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.login-description {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   FORMULARIO
+================================================== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+
+/* ==================================================
+   EFECTO AL SELECCIONAR UN CAMPO
+================================================== */
+.form-group input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ==================================================
+   BOTONES
+================================================== */
+.btn {
+    width: 100%;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/* ==================================================
+   EFECTO DEL BOTÓN
+================================================== */
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+
+/* ==================================================
+   RECUPERAR CONTRASEÑA
+================================================== */
+.forgot-password {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   PIE DE PÁGINA
+================================================== */
+.main-footer {
+    text-align: center;
+    padding: 15px;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   DISEÑO RESPONSIVO
+================================================== */
+@media (max-width: 600px) {
+
+    .main-header {
+        padding: 15px 20px;
+    }
+
+    .brand h1 {
+        font-size: 20px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+    }
+
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+}
+
+
+/* ==================================================
+   FORMULARIOS DE RECUPERACIÓN Y CAMBIO DE CONTRASEÑA
+================================================== */
+.password-container {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.password-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.password-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.password-header h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.password-header p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.password-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.password-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   MENSAJE INFORMATIVO
+================================================== */
+.info-message {
+    background-color: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    color: #1D4ED8;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   MENSAJE DE ÉXITO
+================================================== */
+.success-message {
+    background-color: #DCFCE7;
+    border: 1px solid #BBF7D0;
+    color: var(--color-success);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 600px) {
+
+    .password-card {
+        padding: 28px 22px;
+    }
+
+    .password-header h2 {
+        font-size: 24px;
+    }
+
+}
+
+
+/* ==================================================
+   ELEMENTOS ADICIONALES DEL LOGIN
+================================================== */
+.login-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    font-size: 36px;
+}
+
+
+/* ==================================================
+   OPCIONES DEL LOGIN
+================================================== */
+.login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.remember-me input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   ENLACE DE RECUPERACIÓN
+================================================== */
+.login-options .forgot-password {
+    margin-top: 0;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   BOTÓN DEL LOGIN
+================================================== */
+.login-card .btn {
+    margin-top: 5px;
+}
+
+
+/* ==================================================
+   EFECTO DE LA TARJETA
+================================================== */
+.login-card {
+    border: 1px solid rgba(209, 213, 219, 0.7);
+}
+
+
+/* ==================================================
+   RESPONSIVE DEL LOGIN
+================================================== */
+@media (max-width: 600px) {
+
+    .login-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .login-options .forgot-password {
+        white-space: normal;
+    }
+
+}
+
+
+/* ==================================================
+   VOLVER AL LOGIN
+================================================== */
+.back-login {
+    margin-top: 20px;
+}
+
+
+/* ==================================================
+   BOTONES PRINCIPALES DEL SISTEMA
+================================================== */
+
+.btn-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+    height: 40px;
+
+    padding: 10px 20px;
+
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.1s;
+}
+
+.btn-principal:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-principal:active {
+    transform: scale(0.98);
+}
+
+
+
+/* ==========================================
+   ESTADOS DE LAS CITAS
+========================================== */
+
+.estado-cita {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.estado-cita.pendiente {
+    color: #946200;
+    text-decoration-color: #facc15;
+    background-color: #fff7cc;
+}
+
+.estado-cita.confirmada {
+    color: #15803d;
+    text-decoration-color: #22c55e;
+    background-color: #dcfce7;
+}
+
+.estado-cita.cancelada {
+    color: #dc2626;
+    text-decoration-color: #ef4444;
+    background-color: #fee2e2;
+}
+
+

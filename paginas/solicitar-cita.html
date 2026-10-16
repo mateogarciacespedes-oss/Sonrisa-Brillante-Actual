@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Solicitar cita | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/solicitar-cita.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Paciente
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <!-- DASHBOARD -->
+                        <a
+                            href="dashboard-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+                        <!-- MIS CITAS -->
+                        <a
+                            href="citas-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Mis citas
+                            </span>
+
+                        </a>
+
+
+                        <!-- SOLICITAR CITA -->
+                        <a
+                            href="solicitar-cita.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                ➕
+                            </span>
+
+                            <span>
+                                Solicitar cita
+                            </span>
+
+                        </a>
+
+
+                        <!-- HISTORIAL -->
+                        <a
+                            href="historial-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Mi historial clínico
+                            </span>
+
+                        </a>
+
+
+                        <!-- TRATAMIENTOS -->
+                        <a
+                            href="tratamientos-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Mis tratamientos
+                            </span>
+
+                        </a>
+
+
+                        <!-- PERFIL -->
+                        <a
+                            href="perfil-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👤
+                            </span>
+
+                            <span>
+                                Mi perfil
+                            </span>
+
+                        </a>
+
+
+                    </nav>
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+
+            </aside>
+
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- ENCABEZADO -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Solicitar cita
+                        </h2>
+
+                        <p>
+                            Selecciona el servicio, odontólogo y horario que prefieras.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                    FORMULARIO
+                ========================== -->
+                <section class="appointment-form-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Datos de la cita
+                            </h2>
+
+                            <p>
+                                Completa la información para solicitar una nueva cita.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form class="appointment-form">
+
+
+                        <!-- SERVICIO -->
+                        <div class="form-group">
+
+                            <label for="servicio">
+                                Servicio odontológico
+                            </label>
+
+                            <select
+                                id="servicio"
+                                name="servicio"
+                            >
+
+                                <option value="">
+                                    Selecciona un servicio
+                                </option>
+
+                                <option value="limpieza">
+                                    Limpieza dental
+                                </option>
+
+                                <option value="consulta">
+                                    Consulta general
+                                </option>
+
+                                <option value="ortodoncia">
+                                    Ortodoncia
+                                </option>
+
+                                <option value="blanqueamiento">
+                                    Blanqueamiento dental
+                                </option>
+
+                                <option value="restauracion">
+                                    Restauración dental
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- ODONTÓLOGO -->
+                        <div class="form-group">
+
+                            <label for="odontologo">
+                                Odontólogo
+                            </label>
+
+                            <select
+                                id="odontologo"
+                                name="odontologo"
+                            >
+
+                                <option value="">
+                                    Selecciona un odontólogo
+                                </option>
+
+                                <option value="martinez">
+                                    Dra. Martínez
+                                </option>
+
+                                <option value="perez">
+                                    Dr. Pérez
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- FECHA -->
+                        <div class="form-group">
+
+                            <label for="fecha">
+                                Fecha
+                            </label>
+
+                            <input
+                                type="date"
+                                id="fecha"
+                                name="fecha"
+                            >
+
+                        </div>
+
+
+
+                        <!-- HORA -->
+                        <div class="form-group">
+
+                            <label for="hora">
+                                Hora disponible
+                            </label>
+
+                            <select
+                                id="hora"
+                                name="hora"
+                            >
+
+                                <option value="">
+                                    Selecciona una hora
+                                </option>
+
+                                <option value="0900">
+                                    09:00 AM
+                                </option>
+
+                                <option value="1030">
+                                    10:30 AM
+                                </option>
+
+                                <option value="1400">
+                                    02:00 PM
+                                </option>
+
+                                <option value="1530">
+                                    03:30 PM
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- MOTIVO -->
+                        <div class="form-group full-width">
+
+                            <label for="motivo">
+                                Motivo de la consulta
+                            </label>
+
+                            <textarea
+                                id="motivo"
+                                name="motivo"
+                                rows="4"
+                                placeholder="Describe brevemente el motivo de tu cita"
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- BOTONES -->
+                        <div class="form-actions">
+
+                            <a
+                                href="citas-paciente.html"
+                                class="btn btn-secondary"
+                            >
+                                Cancelar
+                            </a>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                Solicitar cita
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <!-- =========================
+            FOOTER
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/solicitar-cita-paciente.js"></script>
+
+
+    </body>
+
+</html>

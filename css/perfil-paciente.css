@@ -1,0 +1,651 @@
+/* ========================================
+   ESTRUCTURA GENERAL
+======================================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+.dashboard-header {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    font-size: 30px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* ========================================
+   ESTRUCTURA PRINCIPAL
+======================================== */
+.dashboard-layout {
+    min-height: calc(100vh - 125px);
+    display: flex;
+}
+
+
+/* ========================================
+   MENÚ LATERAL
+======================================== */
+.sidebar {
+    width: 230px;
+    padding: 25px 15px;
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: var(--color-background);
+}
+
+.sidebar-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.menu-icon {
+    width: 24px;
+    text-align: center;
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: var(--color-danger);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.logout-link:hover {
+    background-color: #FEF2F2;
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+.dashboard-content {
+    flex: 1;
+    padding: 35px;
+}
+
+.page-heading {
+    margin-bottom: 30px;
+}
+
+.page-heading h2 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+
+/* ========================================
+   SECCIONES
+======================================== */
+.dashboard-section {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    margin: 0 0 6px;
+    font-size: 21px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+/* ========================================
+   FORMULARIO
+======================================== */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+
+    border-color: var(--color-primary);
+}
+
+
+/* Campo que ocupa todo el ancho */
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+
+/* Documento bloqueado */
+#documento {
+    background-color: var(--color-background);
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   ACCIONES
+======================================== */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-white);
+}
+
+
+/* ========================================
+   SEGURIDAD
+======================================== */
+.security-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px;
+    background-color: var(--color-background);
+    border-radius: 8px;
+}
+
+.security-option strong {
+    font-size: 15px;
+}
+
+.security-option p {
+    margin: 6px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+/* ========================================
+   MODAL CAMBIAR CONTRASEÑA
+======================================== */
+.modal-password-paciente {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+
+.modal-password-contenido {
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.20);
+    animation:
+        modalAparecer 0.25s ease;
+}
+
+
+/* ========================================
+   ENCABEZADO MODAL CONTRASEÑA
+======================================== */
+.modal-password-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.modal-password-header h2 {
+    margin: 0 0 8px;
+    color: var(--color-text);
+    font-size: 24px;
+}
+
+.modal-password-header p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+.modal-password-cerrar {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color:
+        var(--color-background);
+    color: var(--color-text);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.modal-password-cerrar:hover {
+    background-color:
+        var(--color-border);
+}
+
+
+/* ========================================
+   FORMULARIO CONTRASEÑA
+======================================== */
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.password-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.password-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.password-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+.password-form input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.10);
+}
+
+
+/* ========================================
+   BOTONES CONTRASEÑA
+======================================== */
+.modal-password-acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.modal-password-acciones .btn {
+    min-width: 140px;
+}
+
+
+/* ========================================
+   MODAL MENSAJE
+======================================== */
+.modal-mensaje-paciente {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:
+        rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10000;
+}
+
+
+.modal-mensaje-contenido {
+    width: 100%;
+    max-width: 440px;
+    background-color:
+        var(--color-white);
+    border-radius: 12px;
+    padding: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.20);
+    animation:
+        modalAparecer 0.25s ease;
+}
+
+
+/* ========================================
+   ICONO MENSAJE
+======================================== */
+.modal-mensaje-icono {
+    width: 58px;
+    height: 58px;
+    margin:
+        0 auto 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.modal-mensaje-icono.success {
+    background-color: #DCFCE7;
+    color: #16A34A;
+}
+
+.modal-mensaje-icono.error {
+    background-color: #FEE2E2;
+    color: #DC2626;
+}
+
+
+/* ========================================
+   TEXTO MENSAJE
+======================================== */
+.modal-mensaje-texto h2 {
+    margin: 0 0 10px;
+    color: var(--color-text);
+    font-size: 23px;
+}
+
+.modal-mensaje-texto p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   BOTÓN ACEPTAR
+======================================== */
+.btn-modal-mensaje {
+    margin-top: 25px;
+    min-width: 120px;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color:
+        var(--color-primary);
+    color:
+        var(--color-white);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-modal-mensaje:hover {
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   ANIMACIÓN MODAL
+======================================== */
+@keyframes modalAparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-10px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+.dashboard-footer {
+    padding: 12px;
+
+    text-align: center;
+
+    color:
+        var(--color-text-secondary);
+
+    background-color:
+        var(--color-white);
+
+    border-top:
+        1px solid var(--color-border);
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 800px) {
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--color-border);
+    }
+
+    .dashboard-content {
+        padding: 25px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group-full {
+        grid-column: auto;
+    }
+
+    .security-option {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        padding: 12px 18px;
+    }
+
+    .user-info strong {
+        display: none;
+    }
+
+    .dashboard-content {
+        padding: 18px;
+    }
+
+
+    /* Modal contraseña */
+    .modal-password-contenido {
+        padding: 22px;
+
+        max-height: 92vh;
+    }
+
+    .modal-password-header h2 {
+        font-size: 21px;
+    }
+
+    .modal-password-acciones {
+        flex-direction: column-reverse;
+    }
+
+    .modal-password-acciones .btn {
+        width: 100%;
+    }
+
+
+    /* Modal confirmación */
+    .modal-mensaje-contenido {
+        padding: 25px;
+    }
+
+}

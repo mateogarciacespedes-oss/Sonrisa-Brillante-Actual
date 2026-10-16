@@ -1,0 +1,514 @@
+/* ========================================
+   ESTRUCTURA GENERAL
+======================================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+.dashboard-header {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    font-size: 30px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* ========================================
+   ESTRUCTURA
+======================================== */
+.dashboard-layout {
+    min-height: calc(100vh - 125px);
+    display: flex;
+}
+
+
+/* ========================================
+   MENÚ
+======================================== */
+.sidebar {
+    width: 230px;
+    padding: 25px 15px;
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.sidebar-link:hover {
+    background-color: var(--color-background);
+}
+
+.sidebar-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.menu-icon {
+    width: 24px;
+    text-align: center;
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: var(--color-danger);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+.dashboard-content {
+    flex: 1;
+    padding: 35px;
+}
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.page-heading h2 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+
+/* ========================================
+   BOTONES
+======================================== */
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/* ========================================
+   FILTROS
+======================================== */
+.filters-section {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.filter-group input,
+.filter-group select {
+    min-width: 190px;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-white);
+}
+
+.filter-btn {
+    height: 40px;
+}
+
+
+/* ========================================
+   TABLA
+======================================== */
+.dashboard-section {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin: 0 0 6px;
+    font-size: 21px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+.appointments-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns:
+        1.4fr 1.4fr 1fr 1fr 1fr;
+
+    gap: 15px;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table-header {
+    font-weight: bold;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+/* ========================================
+   ESTADOS
+======================================== */
+.status {
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.confirmed {
+    background-color: #DCFCE7;
+    color: var(--color-success);
+}
+
+.status.pending {
+    background-color: #FEF3C7;
+    color: #B45309;
+}
+
+.status.cancelled {
+    background-color: #FEE2E2;
+    color: var(--color-danger);
+}
+
+/* ==========================================
+   CRUD DE CITAS
+========================================== */
+
+.appointments-table .table-row {
+    align-items: center;
+}
+
+.acciones-cita {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.btn-accion {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px 6px;
+    font-family: inherit;
+}
+
+.btn-accion:hover {
+    text-decoration: underline;
+}
+
+.btn-ver {
+    color: #1976d2;
+}
+
+.btn-editar {
+    color: #2e7d32;
+}
+
+.btn-eliminar {
+    color: #c62828;
+}
+
+
+/* ==========================================
+   MODAL
+========================================== */
+.modal-cita {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-cita .modal-contenido {
+    background: #ffffff;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+
+/* ==========================================
+   CABECERA DEL MODAL
+========================================== */
+.modal-cita .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+
+.modal-cita .modal-header h2 {
+    margin: 0 0 5px 0;
+}
+
+.modal-cita .modal-header p {
+    margin: 0;
+    color: #666;
+}
+
+.modal-cita .modal-cerrar {
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+}
+
+.modal-cita .modal-cerrar:hover {
+    color: #000;
+}
+
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+.modal-cita .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+
+.modal-cita .form-group label {
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.modal-cita .form-group input,
+.modal-cita .form-group select {
+    padding: 11px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+}
+
+.modal-cita .form-group input:focus,
+.modal-cita .form-group select:focus {
+    border-color: #4f7cff;
+}
+
+
+/* ==========================================
+   BOTONES DEL MODAL
+========================================== */
+.modal-cita .modal-acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.modal-cita .modal-acciones .btn {
+    cursor: pointer;
+}
+
+/* ==========================================
+   DATOS PARA "VER"
+========================================== */
+.datos-cita {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.datos-cita .dato {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+    background: #f7f7f7;
+    border-radius: 7px;
+}
+
+.datos-cita .dato strong {
+    font-size: 13px;
+    color: #555;
+}
+
+.datos-cita .dato span {
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   FILA VACÍA
+========================================== */
+.fila-vacia {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 900px) {
+
+    .appointments-table {
+        overflow-x: auto;
+    }
+
+    .appointments-table .table-row {
+        min-width: 800px;
+    }
+
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+.dashboard-footer {
+    padding: 12px;
+    text-align: center;
+    color: var(--color-text-secondary);
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 800px) {
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .page-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .filters-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Citas | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/citas.css"
+        >
+
+    </head>
+
+    <body>
+
+        <!-- =========================
+         ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Administrador
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+            <!-- =========
+             MENÚ 
+            ========== -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+                            <a href="dashboard.html" class="sidebar-link">
+                            <span class="menu-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+
+                        <a href="usuarios.html" class="sidebar-link">
+                            <span class="menu-icon">👥</span>
+                            <span>Usuarios</span>
+                        </a>
+
+                        <a href="pacientes.html" class="sidebar-link">
+                            <span class="menu-icon">👥</span>
+                            <span>Pacientes</span>
+                        </a>
+
+                        <a href="citas.html" class="sidebar-link active">
+                            <span class="menu-icon">📅</span>
+                            <span>Citas</span>
+                        </a>
+
+                        <a href="servicios.html" class="sidebar-link">
+                            <span class="menu-icon">🦷</span>
+                            <span>Servicios</span>
+                        </a>
+
+                        <a href="tratamientos.html" class="sidebar-link">
+                            <span class="menu-icon">💊</span>
+                            <span>Tratamientos</span>
+                        </a>
+
+                        <a href="historial.html" class="sidebar-link">
+                            <span class="menu-icon">📋</span>
+                            <span>Historial clínico</span>
+                        </a>
+
+                        <a href="reportes.html" class="sidebar-link">
+                            <span class="menu-icon">📈</span>
+                            <span>Reportes</span>
+                        </a>
+                    </nav>
+
+                </div>
+
+
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">🚪</span>
+
+                    <span>Cerrar sesión</span>
+
+                </a>
+
+            </aside>
+
+
+
+            <!-- =========================
+                CONTENIDO
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Citas
+                        </h2>
+
+                        <p>
+                            Gestión y programación de citas odontológicas.
+                        </p>
+
+                    </div>
+
+
+                    <button class="btn-principal">
+                        + Nueva cita
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================
+                    FILTROS
+                ========================== -->
+                <section class="filters-section">
+
+                    <div class="filter-group">
+
+                        <label for="fecha">
+                            Fecha
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                        >
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="estado">
+                            Estado
+                        </label>
+
+                        <select id="estado">
+
+                            <option value="todas">
+                                Todas
+                            </option>
+
+                            <option value="confirmada">
+                                Confirmadas
+                            </option>
+
+                            <option value="pendiente">
+                                Pendientes
+                            </option>
+
+                            <option value="cancelada">
+                                Canceladas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button class="btn btn-primary filter-btn">
+                        Buscar
+                    </button>
+
+                </section>
+
+
+
+                <!-- =========================
+                    LISTA DE CITAS
+                ========================== -->
+                <section class="dashboard-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Citas programadas
+                            </h2>
+
+                            <p>
+                                Citas registradas en el sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="appointments-table">
+
+
+                        <div class="table-row table-header">
+
+                            <span>
+                                Paciente
+                            </span>
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <span>
+                                Fecha
+                            </span>
+
+                            <span>
+                                Hora
+                            </span>
+
+                            <span>
+                                Estado
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="table-row">
+
+                            <span>
+                                Laura Gómez
+                            </span>
+
+                            <span>
+                                Laura Martínez
+                            </span>
+
+                            <span>
+                                08/08/2026
+                            </span>
+
+                            <span>
+                                09:00 AM
+                            </span>
+
+                            <span class="status confirmed">
+                                Confirmada
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="table-row">
+
+                            <span>
+                                Carlos Rodríguez
+                            </span>
+
+                            <span>
+                                Carlos Pérez
+                            </span>
+
+                            <span>
+                                08/08/2026
+                            </span>
+
+                            <span>
+                                10:30 AM
+                            </span>
+
+                            <span class="status pending">
+                                Pendiente
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="table-row">
+
+                            <span>
+                                Ana Torres
+                            </span>
+
+                            <span>
+                                Laura Martínez
+                            </span>
+
+                            <span>
+                                08/08/2026
+                            </span>
+
+                            <span>
+                                02:00 PM
+                            </span>
+
+                            <span class="status confirmed">
+                                Confirmada
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="table-row">
+
+                            <span>
+                                Andrés Martínez
+                            </span>
+
+                            <span>
+                                Carlos Pérez
+                            </span>
+
+                            <span>
+                                08/08/2026
+                            </span>
+
+                            <span>
+                                03:30 PM
+                            </span>
+
+                            <span class="status cancelled">
+                                Cancelada
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+
+        <!-- ==============
+            FOOTER 
+        =============== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/citas.js"></script>
+
+        
+    </body>
+
+</html>
+
+
+
+
+

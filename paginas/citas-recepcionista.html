@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Citas | Recepción | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/citas-recepcionista.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Recepcionista
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <!-- DASHBOARD -->
+                        <a
+                            href="dashboard-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- PACIENTES -->
+                        <a
+                            href="pacientes-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+                            <span>
+                                Pacientes
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- CITAS -->
+                        <a
+                            href="citas-recepcionista.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Citas
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- SERVICIOS -->
+                        <a
+                            href="servicios-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+                            <span>
+                                Servicios
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- TRATAMIENTOS -->
+                        <a
+                            href="tratamientos-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+                        </a>
+
+
+
+                        <!-- HISTORIAL CLÍNICO -->
+                        <a
+                            href="historial-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+                        </a>
+
+                    </nav>
+
+                </div>
+
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+            </aside>
+
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- ENCABEZADO -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Citas
+                        </h2>
+
+                        <p>
+                            Agenda y gestión de citas odontológicas.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-principal"
+                        id="btnNuevaCita"
+                    >
+                        + Nueva cita
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================
+                    FILTROS DE CITAS
+                ========================== -->
+                <section class="filters-section">
+
+
+                    <!-- FECHA -->
+                    <div class="filter-group">
+
+                        <label for="fechaCita">
+                            Fecha
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaCita"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ODONTÓLOGO -->
+                    <div class="filter-group">
+
+                        <label for="odontologo">
+                            Odontólogo
+                        </label>
+
+                        <select id="odontologo">
+
+                            <option value="todos">
+                                Todos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ESTADO -->
+                    <div class="filter-group">
+
+                        <label for="estadoCita">
+                            Estado
+                        </label>
+
+                        <select id="estadoCita">
+
+                            <option value="todas">
+                                Todas
+                            </option>
+
+                            <option value="confirmada">
+                                Confirmadas
+                            </option>
+
+                            <option value="pendiente">
+                                Pendientes
+                            </option>
+
+                            <option value="cancelada">
+                                Canceladas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- BOTÓN BUSCAR -->
+                    <button
+                        type="button"
+                        class="btn-principal filter-btn"
+                    >
+                        Buscar
+                    </button>
+
+                </section>
+
+
+
+                <!-- =========================
+                    CITAS PROGRAMADAS
+                ========================== -->
+                <section class="dashboard-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Citas programadas
+                            </h2>
+
+                            <p>
+                                Agenda de citas odontológicas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TABLA -->
+                    <div class="appointments-table">
+
+
+                        <!-- ENCABEZADO -->
+
+                        <div class="table-row table-header">
+
+                            <span>
+                                Hora
+                            </span>
+
+                            <span>
+                                Paciente
+                            </span>
+
+                            <span>
+                                Odontólogo
+                            </span>
+
+                            <span>
+                                Servicio
+                            </span>
+
+                            <span>
+                                Estado
+                            </span>
+
+                            <span>
+                                Acciones
+                            </span>
+
+                        </div>
+
+
+                        <!--
+                            Las citas se cargan
+                            automáticamente desde JavaScript.
+                        -->
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                    RESUMEN
+                ========================== -->
+                <section class="dashboard-section">
+
+                    <div class="section-heading">
+
+                        <h2>
+                            Resumen de agenda
+                        </h2>
+
+                        <p>
+                            Información general de las citas del día.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="summary-grid">
+
+
+                        <!-- TOTAL -->
+                        <div class="summary-card">
+
+                            <span>
+                                📅
+                            </span>
+
+                            <div>
+
+                                <p>
+                                    Total de citas
+                                </p>
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONFIRMADAS -->
+                        <div class="summary-card">
+
+                            <span>
+                                ✅
+                            </span>
+
+                            <div>
+
+                                <p>
+                                    Confirmadas
+                                </p>
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PENDIENTES -->
+                        <div class="summary-card">
+
+                            <span>
+                                ⏳
+                            </span>
+
+                            <div>
+
+                                <p>
+                                    Pendientes
+                                </p>
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CANCELADAS -->
+                        <div class="summary-card">
+
+                            <span>
+                                ❌
+                            </span>
+
+                            <div>
+
+                                <p>
+                                    Canceladas
+                                </p>
+
+                                <strong>
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+
+
+        <!-- =========================
+            PIE DE PÁGINA
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+
+            </p>
+
+        </footer>
+
+
+
+        <!-- =========================
+            MODAL DE CITAS
+        ========================== -->
+        <div
+            class="modal-cita"
+            id="modalCita"
+        >
+
+            <div class="modal-contenido">
+
+
+                <!-- ENCABEZADO DEL MODAL -->
+                <div class="modal-header">
+
+                    <div>
+
+                        <h2 id="tituloModalCita">
+                            Nueva cita
+                        </h2>
+
+                        <p>
+                            Completa la información de la cita.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="modal-cerrar"
+                        id="cerrarModalCita"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+
+                <!-- FORMULARIO -->
+                <form id="formCita">
+
+
+                    <!-- ID OCULTO -->
+                    <input
+                        type="hidden"
+                        id="citaId"
+                    >
+
+
+
+                    <!-- FECHA -->
+                    <div class="form-group">
+
+                        <label for="fechaModal">
+                            Fecha
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaModal"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- HORA -->
+                    <div class="form-group">
+
+                        <label for="horaModal">
+                            Hora
+                        </label>
+
+                        <input
+                            type="time"
+                            id="horaModal"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PACIENTE -->
+                    <div class="form-group">
+
+                        <label for="pacienteModal">
+                            Paciente
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pacienteModal"
+                            placeholder="Nombre del paciente"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- ODONTÓLOGO -->
+                    <div class="form-group">
+
+                        <label for="odontologoModal">
+                            Odontólogo
+                        </label>
+
+                        <select
+                            id="odontologoModal"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona un odontólogo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- SERVICIO -->
+                    <div class="form-group">
+
+                        <label for="servicioModal">
+                            Servicio
+                        </label>
+
+                        <input
+                            type="text"
+                            id="servicioModal"
+                            placeholder="Servicio odontológico"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- ESTADO -->
+                    <div class="form-group">
+
+                        <label for="estadoModal">
+                            Estado
+                        </label>
+
+                        <select
+                            id="estadoModal"
+                            required
+                        >
+
+                            <option value="pendiente">
+                                Pendiente
+                            </option>
+
+                            <option value="confirmada">
+                                Confirmada
+                            </option>
+
+                            <option value="cancelada">
+                                Cancelada
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ACCIONES -->
+                    <div class="modal-acciones">
+
+                        <button
+                            type="button"
+                            class="btn-modal-secondary"
+                            id="cancelarCita"
+                        >
+                            Cancelar
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="btn-modal-primary"
+                        >
+                            Guardar cita
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/citas-recepcionistas.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

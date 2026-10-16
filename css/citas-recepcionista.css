@@ -1,0 +1,955 @@
+/* ========================================
+   ESTRUCTURA GENERAL
+======================================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+.dashboard-header {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    font-size: 30px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* ========================================
+   ESTRUCTURA PRINCIPAL
+======================================== */
+.dashboard-layout {
+    min-height: calc(100vh - 125px);
+    display: flex;
+}
+
+
+/* ========================================
+   MENÚ LATERAL
+======================================== */
+.sidebar {
+    width: 230px;
+    padding: 25px 15px;
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: var(--color-background);
+}
+
+.sidebar-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.menu-icon {
+    width: 24px;
+    text-align: center;
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: var(--color-danger);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.logout-link:hover {
+    background-color: #FEF2F2;
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+.dashboard-content {
+    flex: 1;
+    padding: 35px;
+}
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.page-heading h2 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+
+/* ========================================
+   BOTONES
+======================================== */
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   FILTROS
+======================================== */
+.filters-section {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.filter-group input,
+.filter-group select {
+    min-width: 180px;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    color: var(--color-text);
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    outline: 2px solid var(--color-primary);
+}
+
+.filter-btn {
+    height: 40px;
+}
+
+
+/* ========================================
+   SECCIÓN
+======================================== */
+.dashboard-section {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin: 0 0 6px;
+    font-size: 21px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+/* ========================================
+   TABLA DE CITAS
+======================================== */
+.appointments-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns:
+        0.8fr
+        1.3fr
+        1.3fr
+        1.5fr
+        1fr
+        1.3fr;
+
+    gap: 15px;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table-header {
+    font-weight: bold;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+
+/* ========================================
+   ACCIONES
+======================================== */
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white);
+    color: var(--color-text);
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-action:hover {
+    background-color: var(--color-background);
+}
+
+
+/* ========================================
+   ESTADOS
+======================================== */
+.status {
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.confirmed {
+    background-color: #DCFCE7;
+    color: var(--color-success);
+}
+
+.status.pending {
+    background-color: #FEF3C7;
+    color: #B45309;
+}
+
+.status.cancelled {
+    background-color: #FEE2E2;
+    color: var(--color-danger);
+}
+
+
+/* ========================================
+   RESUMEN
+======================================== */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.summary-card > span {
+    font-size: 25px;
+}
+
+.summary-card p {
+    margin: 0 0 5px;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}
+
+.summary-card strong {
+    font-size: 22px;
+}
+
+
+/* ========================================
+   MODAL DE CITAS
+======================================== */
+.modal-cita {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-contenido {
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background-color: var(--color-white);
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.20);
+}
+
+
+/* ========================================
+   ENCABEZADO DEL MODAL
+======================================== */
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    margin: 0 0 6px;
+    font-size: 22px;
+}
+
+.modal-header p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.modal-cerrar {
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+    line-height: 1;
+
+    color: var(--color-text-secondary);
+
+    cursor: pointer;
+}
+
+.modal-cerrar:hover {
+    color: var(--color-text);
+}
+
+
+/* ========================================
+   FORMULARIO DEL MODAL
+======================================== */
+#formCita {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#formCita .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#formCita label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#formCita input,
+#formCita select {
+    width: 100%;
+
+    padding: 11px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    background-color: var(--color-white);
+    color: var(--color-text);
+
+    font-size: 14px;
+}
+
+#formCita input:focus,
+#formCita select:focus {
+    outline: 2px solid var(--color-primary);
+}
+
+
+/* ========================================
+   ACCIONES DEL MODAL
+======================================== */
+.modal-acciones {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.btn-modal-secondary,
+.btn-modal-primary {
+    border: none;
+    border-radius: 8px;
+
+    padding: 11px 18px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.btn-modal-secondary {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.btn-modal-secondary:hover {
+    background-color: var(--color-border);
+}
+
+.btn-modal-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-modal-primary:hover {
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   MODAL EN PANTALLAS PEQUEÑAS
+======================================== */
+@media (max-width: 600px) {
+
+    .modal-cita {
+        padding: 15px;
+    }
+
+    .modal-contenido {
+        padding: 20px;
+    }
+
+    .modal-acciones {
+        flex-direction: column;
+    }
+
+    .btn-modal-secondary,
+    .btn-modal-primary {
+        width: 100%;
+    }
+
+}
+
+
+/* ==================================================
+   MODALES DE CITAS
+================================================== */
+
+/* Fondo del modal */
+.modal-cita {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    z-index: 9999;
+
+    overflow-y: auto;
+}
+
+
+/* Contenedor principal del modal */
+.modal-cita .modal-contenido {
+    width: 100%;
+    max-width: 760px;
+
+    max-height: calc(100vh - 40px);
+
+    background-color: var(--color-white);
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    position: relative;
+}
+
+
+/* Encabezado */
+.modal-cita .modal-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.modal-cita .modal-header h2 {
+    margin: 0 0 6px;
+
+    color: var(--color-text);
+
+    font-size: 25px;
+}
+
+
+.modal-cita .modal-header p {
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 15px;
+}
+
+
+/* Botón X */
+.modal-cita .modal-cerrar {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--color-text-secondary);
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    transition:
+        background-color 0.2s,
+        color 0.2s;
+}
+
+
+.modal-cita .modal-cerrar:hover {
+    background-color: var(--color-background);
+
+    color: var(--color-text);
+}
+
+
+/* Campos del formulario */
+.modal-cita .form-group {
+    margin-bottom: 20px;
+}
+
+
+.modal-cita .form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--color-text);
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+.modal-cita .form-group input,
+.modal-cita .form-group select,
+.modal-cita .form-group textarea {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 8px;
+
+    background-color: var(--color-white);
+
+    color: var(--color-text);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.modal-cita .form-group input:focus,
+.modal-cita .form-group select:focus,
+.modal-cita .form-group textarea:focus {
+    border-color: var(--color-primary);
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Acciones del modal */
+.modal-cita .modal-acciones {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--color-border);
+}
+
+
+.modal-cita .modal-acciones button {
+    min-width: 120px;
+
+    height: 40px;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Botón cancelar */
+.modal-cita .btn-modal-secondary {
+    background-color: var(--color-background);
+
+    color: var(--color-text);
+
+    border: 1px solid var(--color-border);
+}
+
+
+.modal-cita .btn-modal-secondary:hover {
+    background-color: #E5E7EB;
+}
+
+
+/* Botón guardar */
+.modal-cita .btn-modal-primary {
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    border: 1px solid var(--color-primary);
+}
+
+
+.modal-cita .btn-modal-primary:hover {
+    background-color: var(--color-primary-dark);
+
+    border-color: var(--color-primary-dark);
+}
+
+
+/* ==================================================
+   MODAL DE DETALLE
+================================================== */
+
+.modal-cita .datos-cita {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+.modal-cita .dato {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 15px;
+
+    background-color: var(--color-background);
+
+    border-radius: 10px;
+
+    border: 1px solid var(--color-border);
+}
+
+
+.modal-cita .dato strong {
+    color: var(--color-text);
+
+    font-size: 14px;
+}
+
+
+.modal-cita .dato span {
+    color: var(--color-text-secondary);
+
+    font-size: 15px;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 700px) {
+
+    .modal-cita {
+        padding: 12px;
+    }
+
+
+    .modal-cita .modal-contenido {
+        max-height: calc(100vh - 24px);
+
+        padding: 22px;
+
+        border-radius: 14px;
+    }
+
+
+    .modal-cita .modal-header h2 {
+        font-size: 21px;
+    }
+
+
+    .modal-cita .datos-cita {
+        grid-template-columns: 1fr;
+    }
+
+
+    .modal-cita .modal-acciones {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+
+    .modal-cita .modal-acciones button {
+        width: 100%;
+    }
+
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.dashboard-footer {
+    padding: 12px;
+    text-align: center;
+    color: var(--color-text-secondary);
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    font-size: 13px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 1100px) {
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .filters-section {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .page-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .filters-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group input,
+    .filter-group select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        padding: 12px 18px;
+    }
+
+    .user-info strong {
+        display: none;
+    }
+
+    .dashboard-content {
+        padding: 18px;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

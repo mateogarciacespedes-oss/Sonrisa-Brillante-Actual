@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Servicios | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/servicios-recepcionista.css"
+        >
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Recepcionista
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- =========================
+                MENÚ LATERAL
+            ========================== -->
+            <aside class="sidebar">
+
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <a
+                            href="dashboard-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="pacientes-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+                            <span>
+                                Pacientes
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="citas-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Citas
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="servicios-recepcionista.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+                            <span>
+                                Servicios
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="tratamientos-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+                        </a>
+
+
+
+                        <a
+                            href="historial-recepcionista.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+                        </a>
+
+
+                    </nav>
+
+                </div>
+
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+
+            </aside>
+
+
+
+            <!-- =========================
+                CONTENIDO PRINCIPAL
+            ========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- ENCABEZADO -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Servicios
+                        </h2>
+
+                        <p>
+                            Consulta de los servicios odontológicos disponibles.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                    BÚSQUEDA
+                ========================== -->
+                <section class="search-section">
+
+
+                    <div class="search-box">
+
+                        <label for="buscarServicio">
+                            Buscar servicio
+                        </label>
+
+                        <input
+                            type="search"
+                            id="buscarServicio"
+                            placeholder="Buscar por nombre del servicio"
+                        >
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =========================
+                    SERVICIOS
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Servicios disponibles
+                            </h2>
+
+                            <p>
+                                Servicios odontológicos registrados.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="services-grid">
+
+                        <!-- Los servicios son cargados por JavaScript -->
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+        <!-- =========================
+            MODAL SERVICIO
+        ========================== -->
+        <div
+            class="modal-overlay"
+            id="modalServicio"
+        >
+
+
+            <div class="service-modal">
+
+
+                <!-- ENCABEZADO DEL MODAL -->
+                <div class="modal-header">
+
+
+                    <div>
+
+                        <h2 id="tituloModal">
+                            Nuevo servicio
+                        </h2>
+
+                        <p>
+                            Completa la información del servicio.
+                        </p>
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        class="modal-close"
+                        id="cerrarModal"
+                    >
+                        ×
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- FORMULARIO -->
+                <form id="formServicio">
+
+
+                    <input
+                        type="hidden"
+                        id="servicioId"
+                    >
+
+
+
+                    <div class="form-group">
+
+
+                        <label for="nombreServicio">
+                            Nombre del servicio
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="nombreServicio"
+                            placeholder="Ej: Limpieza dental"
+                            required
+                        >
+
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+
+                        <label for="descripcionServicio">
+                            Descripción
+                        </label>
+
+
+                        <textarea
+                            id="descripcionServicio"
+                            rows="4"
+                            placeholder="Describe brevemente el servicio..."
+                            required
+                        ></textarea>
+
+
+                    </div>
+
+
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+
+                            <label for="duracionServicio">
+                                Duración
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="duracionServicio"
+                                placeholder="Ej: 60 minutos"
+                                required
+                            >
+
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+
+                            <label for="precioServicio">
+                                Precio
+                            </label>
+
+
+                            <input
+                                type="number"
+                                id="precioServicio"
+                                min="0"
+                                placeholder="Ej: 80000"
+                                required
+                            >
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- BOTONES -->
+                    <div class="modal-actions">
+
+
+                        <button
+                            type="button"
+                            class="btn-modal-secondary"
+                            id="cancelarServicio"
+                        >
+                            Cancelar
+                        </button>
+
+
+
+                        <button
+                            type="submit"
+                            class="btn-modal-primary"
+                        >
+                            Guardar cambios
+                        </button>
+
+
+                    </div>
+
+
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================
+            FOOTER
+        ========================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/servicios-recepcionista.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

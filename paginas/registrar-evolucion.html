@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+
+        <title>Registrar evolución | Sonrisa Brillante</title>
+
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+
+        <link
+            rel="stylesheet"
+            href="../css/registrar-evolucion.css"
+        >
+
+
+    </head>
+
+    <body>
+
+
+        <!-- =========================
+            ENCABEZADO
+        ========================== -->
+        <header class="dashboard-header">
+
+
+            <div class="brand">
+
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+
+                <div>
+
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="user-info">
+
+
+                <span>
+                    👤
+                </span>
+
+
+                <strong id="nombreUsuario">
+                    Odontólogo
+                </strong>
+
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- MENÚ LATERAL -->
+            <aside class="sidebar">
+
+
+                <div class="sidebar-menu">
+
+
+                    <nav>
+
+
+                        <a
+                            href="dashboard-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+
+                            <span>
+                                Dashboard
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="citas-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+
+                            <span>
+                                Mis citas
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="pacientes-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                👥
+                            </span>
+
+
+                            <span>
+                                Pacientes
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="historial-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+
+                            <span>
+                                Historial clínico
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="tratamientos-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+
+                            <span>
+                                Tratamientos
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="registrar-evolucion.html"
+                            class="sidebar-link active"
+                        >
+
+
+                            <span class="menu-icon">
+                                📝
+                            </span>
+
+
+                            <span>
+                                Registrar evolución
+                            </span>
+
+
+                        </a>
+
+
+                        <a
+                            href="servicios-odontologo.html"
+                            class="sidebar-link"
+                        >
+
+
+                            <span class="menu-icon">
+                                🦷
+                            </span>
+
+
+                            <span>
+                                Servicios
+                            </span>
+
+
+                        </a>
+
+
+                    </nav>
+
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+
+                </a>
+
+
+            </aside>
+
+
+        <!-- =========================
+            CONTENIDO
+        ========================== -->
+            <main class="dashboard-content">
+
+
+                <div class="page-heading">
+
+
+                    <div>
+
+
+                        <h2>
+                            Registrar evolución
+                        </h2>
+
+
+                        <p>
+                            Registra la evolución clínica y las observaciones del paciente.
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                    FORMULARIO
+                ========================== -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+
+                        <div>
+
+
+                            <h2>
+                                Información de la consulta
+                            </h2>
+
+
+                            <p>
+                                Completa los datos correspondientes a la atención realizada.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <form class="evolution-form">
+
+
+                        <!-- PACIENTE -->
+                        <div class="form-group">
+
+
+                            <label for="paciente">
+                                Paciente
+                            </label>
+
+
+                            <select id="paciente">
+
+
+                                <option value="">
+                                    Seleccionar paciente
+                                </option>
+
+
+                            </select>
+
+
+                        </div>
+
+
+                        <!-- FECHA -->
+                        <div class="form-group">
+
+
+                            <label for="fecha">
+                                Fecha de consulta
+                            </label>
+
+
+                            <input
+                                type="date"
+                                id="fecha"
+                            >
+
+
+                        </div>
+
+
+                        <!-- MOTIVO -->
+                        <div class="form-group">
+
+
+                            <label for="motivo">
+                                Motivo de consulta
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="motivo"
+                                placeholder="Ingrese el motivo de consulta"
+                            >
+
+
+                        </div>
+
+
+                        <!-- DIAGNÓSTICO -->
+                        <div class="form-group">
+
+
+                            <label for="diagnostico">
+                                Diagnóstico
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="diagnostico"
+                                placeholder="Ingrese el diagnóstico"
+                            >
+
+
+                        </div>
+
+
+                        <!-- TRATAMIENTO -->
+                        <div class="form-group">
+
+
+                            <label for="tratamiento">
+                                Tratamiento realizado
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="tratamiento"
+                                placeholder="Ingrese el tratamiento realizado"
+                            >
+
+
+                        </div>
+
+
+                        <!-- EVOLUCIÓN -->
+                        <div class="form-group full-width">
+
+
+                            <label for="evolucion">
+                                Evolución / Observaciones
+                            </label>
+
+
+                            <textarea
+                                id="evolucion"
+                                rows="5"
+                                placeholder="Describa la evolución del paciente y las observaciones realizadas"
+                            ></textarea>
+
+
+                        </div>
+
+
+                        <!-- RECOMENDACIONES -->
+                        <div class="form-group full-width">
+
+
+                            <label for="recomendaciones">
+                                Recomendaciones
+                            </label>
+
+
+                            <textarea
+                                id="recomendaciones"
+                                rows="4"
+                                placeholder="Ingrese las recomendaciones para el paciente"
+                            ></textarea>
+
+
+                        </div>
+
+
+                        <!-- BOTONES -->
+                        <div class="form-actions">
+
+
+                            <a
+                                href="historial-odontologo.html"
+                                class="btn btn-secondary"
+                            >
+                                Cancelar
+                            </a>
+
+
+                            <button
+                                type="submit"
+                                class="btn-principal"
+                            >
+                                Guardar evolución
+                            </button>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <!-- =============
+         FOOTER 
+        ============== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <!-- =========================
+            JAVASCRIPT
+        ========================== -->
+        <script src="../js/registrar-evolucion.js"></script>
+
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+
+        <title>Dashboard Paciente | Sonrisa Brillante</title>
+
+        <link
+            rel="stylesheet"
+            href="../css/style.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="../css/dashboard-paciente.css"
+        >
+
+    </head>
+
+    <body>
+
+        <!-- ==================
+            ENCABEZADO 
+        =================== -->
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🦷
+                </div>
+
+                <div>
+
+                    <h1>
+                        Sonrisa Brillante
+                    </h1>
+
+                    <p>
+                        Sistema de Gestión Odontológica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>
+                    👤
+                </span>
+
+                <strong id="nombreUsuario">
+                    Paciente
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+            ESTRUCTURA PRINCIPAL 
+        ========================== -->
+        <div class="dashboard-layout">
+
+
+            <!-- MENÚ LATERAL -->
+
+            <aside class="sidebar">
+
+
+                <div class="sidebar-menu">
+
+                    <nav>
+
+
+                        <!-- DASHBOARD -->
+                        <a
+                            href="dashboard-paciente.html"
+                            class="sidebar-link active"
+                        >
+
+                            <span class="menu-icon">
+                                📊
+                            </span>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+
+                        <!-- MIS CITAS -->
+                        <a
+                            href="citas-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                Mis citas
+                            </span>
+
+                        </a>
+
+
+                        <!-- SOLICITAR CITA -->
+                        <a
+                            href="solicitar-cita.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                ➕
+                            </span>
+
+                            <span>
+                                Solicitar cita
+                            </span>
+
+                        </a>
+
+
+                        <!-- HISTORIAL -->
+                        <a
+                            href="historial-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                📋
+                            </span>
+
+                            <span>
+                                Mi historial clínico
+                            </span>
+
+                        </a>
+
+
+                        <!-- TRATAMIENTOS -->
+                        <a
+                            href="tratamientos-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                💊
+                            </span>
+
+                            <span>
+                                Mis tratamientos
+                            </span>
+
+                        </a>
+
+
+                        <!-- PERFIL -->
+                        <a
+                            href="perfil-paciente.html"
+                            class="sidebar-link"
+                        >
+
+                            <span class="menu-icon">
+                                👤
+                            </span>
+
+                            <span>
+                                Mi perfil
+                            </span>
+
+                        </a>
+
+
+                    </nav>
+
+                </div>
+
+
+                <!-- CERRAR SESIÓN -->
+                <a
+                    href="../index.html"
+                    class="logout-link"
+                >
+
+                    <span class="menu-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+
+            </aside>
+
+
+
+            <!-- ==========================
+                CONTENIDO PRINCIPAL 
+            =========================== -->
+            <main class="dashboard-content">
+
+
+                <!-- ENCABEZADO -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Bienvenido, Juan
+                        </h2>
+
+                        <p>
+                            Consulta tu información y gestiona tus citas odontológicas.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="solicitar-cita.html"
+                        class="btn-principal"
+                    >
+                        + Solicitar cita
+                    </a>
+
+                </div>
+
+
+
+                <!-- TARJETAS -->
+                <section class="dashboard-cards">
+
+
+                    <!-- PRÓXIMA CITA -->
+                    <article class="dashboard-card">
+
+                        <div class="card-content">
+
+                            <p>
+                                Próxima cita
+                            </p>
+
+                            <h3>
+                                15 Ago
+                            </h3>
+
+                            <small>
+                                09:00 AM
+                            </small>
+
+                        </div>
+
+                        <div class="card-icon">
+                            📅
+                        </div>
+
+                    </article>
+
+
+                    <!-- CITAS PENDIENTES -->
+                    <article class="dashboard-card">
+
+                        <div class="card-content">
+
+                            <p>
+                                Citas pendientes
+                            </p>
+
+                            <h3>
+                                2
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            ⏳
+                        </div>
+
+                    </article>
+
+
+                    <!-- TRATAMIENTOS -->
+                    <article class="dashboard-card">
+
+                        <div class="card-content">
+
+                            <p>
+                                Tratamientos activos
+                            </p>
+
+                            <h3>
+                                1
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            💊
+                        </div>
+
+                    </article>
+
+
+                    <!-- HISTORIAL -->
+                    <article class="dashboard-card">
+
+                        <div class="card-content">
+
+                            <p>
+                                Consultas realizadas
+                            </p>
+
+                            <h3>
+                                8
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            📋
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+                <!-- PRÓXIMA CITA -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Próxima cita
+                            </h2>
+
+                            <p>
+                                Información de tu próxima consulta odontológica.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="citas-paciente.html"
+                            class="btn btn-secondary"
+                        >
+                            Ver mis citas
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="appointment-info">
+
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                📅
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Fecha
+                                </strong>
+
+                                <p>
+                                    15 de agosto de 2026
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                🕘
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Hora
+                                </strong>
+
+                                <p>
+                                    09:00 AM
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                🦷
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Odontólogo
+                                </strong>
+
+                                <p>
+                                    Dra. Martínez
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                🏥
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Servicio
+                                </strong>
+
+                                <p>
+                                    Consulta odontológica
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-status">
+
+                            <span class="status confirmed">
+                                Confirmada
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- ACCIONES RÁPIDAS -->
+                <section class="dashboard-section">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Acciones rápidas
+                            </h2>
+
+                            <p>
+                                Accesos frecuentes para gestionar tu atención.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="quick-actions">
+
+
+                        <a
+                            href="solicitar-cita.html"
+                            class="quick-action"
+                        >
+
+                            <span>
+                                📅
+                            </span>
+
+                            <strong>
+                                Solicitar cita
+                            </strong>
+
+                            <small>
+                                Agenda una nueva consulta
+                            </small>
+
+                        </a>
+
+
+                        <a
+                            href="historial-paciente.html"
+                            class="quick-action"
+                        >
+
+                            <span>
+                                📋
+                            </span>
+
+                            <strong>
+                                Ver historial
+                            </strong>
+
+                            <small>
+                                Consulta tu información clínica
+                            </small>
+
+                        </a>
+
+
+                        <a
+                            href="tratamientos-paciente.html"
+                            class="quick-action"
+                        >
+
+                            <span>
+                                💊
+                            </span>
+
+                            <strong>
+                                Mis tratamientos
+                            </strong>
+
+                            <small>
+                                Consulta tus tratamientos
+                            </small>
+
+                        </a>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+
+        <!-- =================
+            FOOTER 
+        ================== -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Sonrisa Brillante.
+                Todos los derechos reservados.
+            </p>
+
+        </footer>
+
+
+        <script src="../js/dashboard-paciente.js"></script>
+
+
+    </body>
+
+</html>
