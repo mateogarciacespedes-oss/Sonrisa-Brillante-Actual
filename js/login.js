@@ -1,174 +1,246 @@
-document.addEventListener("DOMContentLoaded", function () {
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-crypto</artifactId>
+</dependency>document.addEventListener("DOMContentLoaded", function () {
 
-    const formulario =
-        document.querySelector(".login-card form");
+    const formulario = document.querySelector(".login-card form");
 
     if (!formulario) {
         return;
     }
 
+    // ==========================================
+    // CONFIGURACIÓN DEL BOTÓN DE GOOGLE
+    // ==========================================
+    const configurarBotonGoogle = () => {
+        const contenedorGoogle = document.getElementById("googleSignInButton");
 
-    formulario.addEventListener("submit", function (evento) {
+        if (!contenedorGoogle || !window.google?.accounts?.id) {
+            console.error("No se pudo cargar Google Identity Services.");
+            return;
+        }
 
+        window.google.accounts.id.initialize({
+            client_id: "749357248512-883reue99u4pevpivfiklc8uoiq17n9f.apps.googleusercontent.com",
+
+            callback: async function (respuestaGoogle) {
+                try {
+                    if (!respuestaGoogle.credential) {
+                        alert("Google no proporcionó una credencial válida.");
+                        return;
+                    }
+
+                    const respuesta = await fetch(
+                        "https://sonrisa-brillante-backend.onrender.com/api/auth/google",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                credential: respuestaGoogle.credential
+                            })
+                        }
+                    );
+
+                    const datos = await respuesta.json();
+
+                    if (!respuesta.ok) {
+                        alert(
+                            datos.error ||
+                            "No fue posible iniciar sesión con Google."
+                        );
+                        return;
+                    }
+
+                    const roles = {
+                        1: {
+                            nombre: "Administrador",
+                            ruta: "paginas/dashboard.html"
+                        },
+                        2: {
+                            nombre: "Recepcionista",
+                            ruta: "paginas/dashboard-recepcionista.html"
+                        },
+                        3: {
+                            nombre: "Odontólogo",
+                            ruta: "paginas/dashboard-odontologo.html"
+                        },
+                        4: {
+                            nombre: "Paciente",
+                            ruta: "paginas/dashboard-paciente.html"
+                        }
+                    };
+
+                    const rol = roles[datos.rolId];
+
+                    if (!rol) {
+                        alert("El rol de este usuario no está configurado.");
+                        return;
+                    }
+
+                    const usuarioSesion = {
+                        idUsuario: datos.idUsuario,
+                        nombre: datos.nombre,
+                        apellido: datos.apellido,
+                        correo: datos.correo,
+                        rol: rol.nombre,
+                        estado: "activo"
+                    };
+
+                    localStorage.setItem(
+                        "usuarioSesion",
+                        JSON.stringify(usuarioSesion)
+                    );
+
+                    window.location.href = rol.ruta;
+
+                } catch (error) {
+                    console.error(
+                        "Error al iniciar sesión con Google:",
+                        error
+                    );
+
+                    alert(
+                        "No fue posible conectar con el servidor. " +
+                        "Verifica que el backend Java esté funcionando."
+                    );
+                }
+            }
+        });
+
+        window.google.accounts.id.renderButton(
+            contenedorGoogle,
+            {
+                type: "standard",
+                theme: "outline",
+                size: "large",
+                text: "continue_with",
+                shape: "rectangular",
+                width: 300
+            }
+        );
+    };
+
+    // Esperar a que cargue la biblioteca de Google.
+    const scriptGoogle = document.querySelector(
+        'script[src="https://accounts.google.com/gsi/client"]'
+    );
+
+    if (window.google?.accounts?.id) {
+        configurarBotonGoogle();
+    } else if (scriptGoogle) {
+        scriptGoogle.addEventListener(
+            "load",
+            configurarBotonGoogle,
+            { once: true }
+        );
+
+        scriptGoogle.addEventListener(
+            "error",
+            function () {
+                console.error("No se pudo cargar la biblioteca de Google.");
+            },
+            { once: true }
+        );
+    }
+
+    // ==========================================
+    // INICIO DE SESIÓN TRADICIONAL
+    // ==========================================
+    formulario.addEventListener("submit", async function (evento) {
         evento.preventDefault();
 
+        const campoCorreo = document.getElementById("usuario");
+        const campoContrasena = document.getElementById("contrasena");
 
-        // ==========================================
-        // OBTENER DATOS DEL FORMULARIO
-        // ==========================================
-        const usuarioIngresado =
-            document
-                .getElementById("usuario")
-                .value
-                .trim()
-                .toLowerCase();
+        const correo = campoCorreo.value.trim().toLowerCase();
+        const contrasena = campoContrasena.value;
 
-
-        const contrasenaIngresada =
-            document.getElementById("contrasena").value;
-
-
-        if (
-            usuarioIngresado === "" ||
-            contrasenaIngresada === ""
-        ) {
-
-            alert(
-                "Por favor, ingresa tu usuario y contraseña."
-            );
-
+        if (!correo || !contrasena) {
+            alert("Por favor, ingresa tu correo y contraseña.");
             return;
         }
 
+        try {
+            const respuesta = await fetch(
+                "https://sonrisa-brillante-backend.onrender.com/api/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        correo: correo,
+                        contrasena: contrasena
+                    })
+                }
+            );
 
-        // ==========================================
-        // OBTENER USUARIOS
-        // =========================================
-        const usuarios =
-            JSON.parse(
-                localStorage.getItem("usuarios")
-            ) || [];
+            const datos = await respuesta.json();
 
-
-        // ==========================================
-        // BUSCAR USUARIO
-        // ==========================================
-        const usuarioEncontrado =
-            usuarios.find(function (usuario) {
-
-                return (
-                    usuario.usuario &&
-                    usuario.usuario
-                        .toLowerCase() ===
-                        usuarioIngresado &&
-
-                    usuario.contrasena ===
-                        contrasenaIngresada
+            if (!respuesta.ok) {
+                alert(
+                    datos.error ||
+                    "No fue posible iniciar sesión."
                 );
+                return;
+            }
 
-            });
+            const roles = {
+                1: {
+                    nombre: "Administrador",
+                    ruta: "paginas/dashboard.html"
+                },
+                2: {
+                    nombre: "Recepcionista",
+                    ruta: "paginas/dashboard-recepcionista.html"
+                },
+                3: {
+                    nombre: "Odontólogo",
+                    ruta: "paginas/dashboard-odontologo.html"
+                },
+                4: {
+                    nombre: "Paciente",
+                    ruta: "paginas/dashboard-paciente.html"
+                }
+            };
 
+            const rol = roles[datos.rolId];
 
-        if (!usuarioEncontrado) {
+            if (!rol) {
+                alert("El rol de este usuario no está configurado.");
+                return;
+            }
 
-            alert(
-                "Usuario o contraseña incorrectos."
+            const usuarioSesion = {
+                idUsuario: datos.idUsuario,
+                nombre: datos.nombre,
+                apellido: datos.apellido,
+                correo: datos.correo,
+                rol: rol.nombre,
+                estado: "activo"
+            };
+
+            localStorage.setItem(
+                "usuarioSesion",
+                JSON.stringify(usuarioSesion)
             );
 
-            return;
-        }
+            window.location.href = rol.ruta;
 
-
-        // ==========================================
-        // VALIDAR ESTADO
-        // ==========================================
-        if (
-            !usuarioEncontrado.estado ||
-            usuarioEncontrado.estado.toLowerCase() !==
-                "activo"
-        ) {
-
-            alert(
-                "Este usuario se encuentra inactivo y no puede ingresar al sistema."
+        } catch (error) {
+            console.error(
+                "Error al iniciar sesión:",
+                error
             );
 
-            return;
+            alert(
+                "No fue posible conectar con el servidor. " +
+                "Verifica que el backend Java esté funcionando."
+            );
         }
-
-
-        // ==========================================
-        // GUARDAR SESIÓN
-        // ==========================================
-        localStorage.setItem(
-            "usuarioSesion",
-            JSON.stringify(usuarioEncontrado)
-        );
-
-
-        // ==========================================
-        // REDIRECCIONAR SEGÚN EL ROL
-        // ==========================================
-
-        if (
-            usuarioEncontrado.rol ===
-            "Administrador"
-        ) {
-
-            window.location.href =
-                "paginas/dashboard.html";
-
-            return;
-        }
-
-
-        if (
-            usuarioEncontrado.rol ===
-            "Odontólogo"
-        ) {
-
-            window.location.href =
-                "paginas/dashboard-odontologo.html";
-
-            return;
-        }
-
-
-        if (
-            usuarioEncontrado.rol ===
-            "Recepcionista"
-        ) {
-
-            window.location.href =
-                "paginas/dashboard-recepcionista.html";
-
-            return;
-        }
-        if (
-            usuarioEncontrado.rol ===
-            "Paciente"
-        ) {
-
-            window.location.href =
-                "paginas/dashboard-paciente.html";
-
-            return;
-        }
-
-
-        // ==========================================
-        // ROL NO CONFIGURADO
-        // ==========================================
-        alert(
-            "El rol de este usuario no está configurado."
-        );
-
     });
 
 });
-
-
-
-
-
-
-
+                  

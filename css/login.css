@@ -193,3 +193,40 @@ body {
     }
 
 }
+
+
+/* Inicio de sesión con Google */
+.google-login {
+    margin-top: 22px;
+    width: 100%;
+}
+
+.google-separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+}
+
+.google-separador::before,
+.google-separador::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #e2e8f0;
+}
+
+#googleSignInButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+}
+
+#googleSignInButton > div {
+    max-width: 100%;
+}

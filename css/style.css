@@ -497,3 +497,48 @@ body {
 }
 
 
+/* ==========================================
+   INICIO DE SESIÓN CON GOOGLE
+========================================== */
+
+.login-card .google-login {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.login-card .google-separador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    text-align: center;
+}
+
+.login-card .google-separador::before,
+.login-card .google-separador::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--color-border);
+}
+
+.login-card #googleSignInButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+}
+
+.login-card #googleSignInButton iframe {
+    max-width: 100%;
+}
+
+@media (max-width: 420px) {
+    .login-card .google-separador {
+        gap: 8px;
+        font-size: 12px;
+    }
+}
+

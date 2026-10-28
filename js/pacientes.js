@@ -12,6 +12,22 @@ const botonNuevo = document.querySelector(".page-heading .btn-principal");
     // =========================
     let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
 
+    async function cargarPacientesDesdeBackend() {
+    try {
+        const respuesta = await fetch("http://localhost:8080/api/pacientes");
+
+        if (!respuesta.ok) {
+            throw new Error("No se pudieron consultar los pacientes.");
+        }
+
+        pacientes = await respuesta.json();
+        mostrarPacientes();
+    } catch (error) {
+        console.error("Error al cargar pacientes:", error);
+        alert("No fue posible cargar los pacientes desde el servidor.");
+    }
+
+
     // =========================
     // MOSTRAR USUARIO ACTUAL
     // =========================
@@ -753,8 +769,6 @@ const botonNuevo = document.querySelector(".page-heading .btn-principal");
     // =========================
     // MOSTRAR AL CARGAR
     // =========================
-    mostrarPacientes();
-
-
-
-
+    cargarPacientesDesdeBackend();
+    
+}
